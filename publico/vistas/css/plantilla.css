@@ -1,0 +1,367 @@
+/*=============================================
+GLOBAL
+=============================================*/
+
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+ul, ol{
+	padding:0px;
+}
+
+a:visited, a:link, a:focus, a:hover, a:active{
+	list-style: none;
+	text-decoration: none;
+}
+
+.barraSuperior{
+	background:black;
+}
+
+.barraSuperior a{
+	color:white;
+}
+
+.backColor, .backColor a{
+	background:#47bac1;
+	color:white;
+}
+
+.fondoBreadcrumb{
+	margin-bottom:0px;
+	background: rgba(0,0,0,0);
+}
+
+/*=============================================
+ERROR 404, VERIFICAR
+=============================================*/
+
+.error404 .verificar{
+	color:#333;
+}
+
+/*=============================================
+SCROLL UP
+=============================================*/
+#scrollUp{
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	background: url(../img/plantilla/flecha.jpg);
+}
+
+
+/*=============================================
+ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
+=============================================*/
+
+@media (min-width:1200px){
+
+	.col-lg-0{
+		display: none;
+	}
+
+	.error404 h1{
+		font-size:300px;
+		text-shadow:8px 8px 1px #dadada;
+	}
+
+	.verificar h3{
+		margin-top:30px;
+		font-size:100px;
+		text-shadow:4px 4px 1px #dadada;
+	}
+
+}
+
+/*=============================================
+ESCRITORIO MEDIANO O TABLET HORIZONTAL (MD revisamos en 1024px)
+=============================================*/
+
+@media (max-width:1199px) and (min-width:992px){
+
+	.col-md-0{
+		display: none;
+	}
+
+	.error404 h1{
+		font-size:200px;
+		text-shadow:6px 6px 1px #dadada;
+	}
+
+	.verificar h3{
+		margin-top:30px;
+		font-size:100px;
+		text-shadow:4px 4px 1px #dadada;
+	}
+
+}
+
+/*=============================================
+ESCRITORIO PEQUEÑO O TABLET VERTICAL (SM revisamos en 768px)
+=============================================*/
+
+@media (max-width:991px) and (min-width:768px){
+
+	.col-sm-0{
+		display: none;
+	}
+
+	.error404 h1{
+		font-size:150px;
+		text-shadow:4px 4px 1px #dadada;
+	}
+
+	.verificar h3{
+		margin-top:30px;
+		font-size:100px;
+		text-shadow:4px 4px 1px #dadada;
+	}
+
+}
+
+/*=============================================
+MOVIL (XS revisamos en 320px)
+=============================================*/
+
+@media (max-width:767px){
+
+	.col-xs-0{
+		display: none;
+	}
+
+	.error404 h1{
+		font-size:75px;
+		text-shadow:2px 2px 1px #dadada;
+	}
+
+	.verificar h3{
+		margin-top:30px;
+		font-size:50px;
+		text-shadow:2px 2px 1px #dadada;
+	}
+
+}
+
+
+
+
+
+
+
+
+/*=============================================
+CSS ADMIN LTE
+=============================================*/
+
+.login-box,
+.register-box {
+  width: 360px;
+  margin: auto;
+}
+@media (max-width: 768px) {
+  .login-box,
+  .register-box {
+    width: 90%;
+  }
+}
+.login-box-body,
+.register-box-body {
+  background: #fff;
+  padding: 20px;
+  border-top: 0;
+  color: #666;
+}
+.login-box-body .form-control-feedback,
+.register-box-body .form-control-feedback {
+  color: #777;
+}
+.login-box-msg,
+.register-box-msg {
+  margin: 0;
+  text-align: center;
+  padding: 0 20px 20px 20px;
+}
+
+.login-logo,
+.register-logo {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 300;
+}
+
+
+
+
+
+
+
+/*=============================================
+PARTICULAS Y BOTONES
+=============================================*/
+
+#particles-js {
+	height: 100%; 
+	width: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.form{
+	width: 100%;
+	height: 50px;
+	max-width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.form input{
+	width: 100%;
+	height: 100%;
+	background: none;
+	color: rgb(90, 90, 90);
+	padding-top: 20px;
+	border: none;
+	outline: 0px;
+}
+.form .lbl-nombre{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 1px solid #c7c7c7;
+}
+
+.form .lbl-nombre:after{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+	height: 100%;
+	border-bottom: 3px solid #2b96fa;
+	transform: translateX(-100%);
+	transition: all 0.3s ease;
+}
+.text-nomb{
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+	transition: all 0.3s ease;
+	color: rgb(145, 145, 145);
+}
+.form input:focus + .lbl-nombre .text-nomb,.form input:valid + .lbl-nombre .text-nomb{
+	transform: translateY(-100%);
+	font-size: 14px;
+	color: #2b96fa;
+}
+.form input:focus + .lbl-nombre:after, .form input:valid + .lbl-nombre:after{
+	transform: translateX(0%);
+}
+
+
+.form .spanIcon{
+	transform: translateY(+50%);
+}
+
+.form input:focus + .lbl-nombre .spanIcon,.form input:valid + .lbl-nombre .spanIcon{
+	
+	color: #2b96fa;
+}
+
+
+
+
+/*** ESTILOS BOTÓN SLIDE TOP ***/
+.ov-btn-slide-top {
+	margin-top: 10px;
+	background: #fff; /* color de fondo */
+	width: 100%;
+	color: #2b96fa; /* color de fuente */
+	border: 2px solid #2b96fa; /* tamaño y color de borde */
+	padding: 10px 10px;
+	border-radius: 3px; /* redondear bordes */
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	display: inline-block;
+	text-align: center;
+}
+.ov-btn-slide-top:hover {
+color: #fff; /* color de fuente hover */
+}
+.ov-btn-slide-top::after {
+content: "";
+background: #2b96fa; /* color de fondo hover */
+position: absolute;
+z-index: -1;
+padding: 16px 20px;
+display: block;
+left: 0;
+right: 0;
+top: -100%;
+bottom: 100%;
+-webkit-transition: all 0.35s;
+transition: all 0.35s;
+}
+.ov-btn-slide-top:hover::after {
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+-webkit-transition: all 0.35s;
+transition: all 0.35s;
+}
+
+
+/*** ESTILOS BOTÓN SLIDE TOP ***/
+.ov-btn-slide-topBut {
+	margin-top: 10px;
+	background: #0084ff; /* color de fondo */
+	width: 200px;
+	color: #ffffff; /* color de fuente */
+	border: 2px solid #2b96fa; /* tamaño y color de borde */
+	padding: 8px 8px;
+	border-radius: 3px; /* redondear bordes */
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	display: inline-block;
+	text-align: center;
+}
+.ov-btn-slide-topBut:hover {
+color: #fff; /* color de fuente hover */
+}
+.ov-btn-slide-topBut::after {
+content: "";
+background: #2b96fa; /* color de fondo hover */
+position: absolute;
+z-index: -1;
+padding: 16px 20px;
+display: block;
+left: 0;
+right: 0;
+top: -100%;
+bottom: 100%;
+-webkit-transition: all 0.15s;
+transition: all 0.15s;
+}
+.ov-btn-slide-topBut:hover::after {
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+-webkit-transition: all 0.35s;
+transition: all 0.35s;
+}
