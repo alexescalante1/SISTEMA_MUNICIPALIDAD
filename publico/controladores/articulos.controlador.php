@@ -22,7 +22,7 @@ class ControladorArticulos{
 
 	static public function ctrMostrarArticulos($ordenar, $item, $valor, $base, $tope, $modo){
 
-		$tabla = "publicar";
+		$tabla = "detallearticulo";
 
 		$respuesta = ModeloArticulos::mdlMostrarArticulos($tabla, $ordenar, $item, $valor, $base, $tope, $modo);
 

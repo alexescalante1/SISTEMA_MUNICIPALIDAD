@@ -60,12 +60,12 @@
   /**
    * Scrolls to an element with header offset
    */
-  const scrollto = (el) => {
+   const scrollto = (el) => {
     let header = select('#header')
     let offset = header.offsetHeight
 
     if (!header.classList.contains('header-scrolled')) {
-      offset -= 10
+      offset -= 16
     }
 
     let elementPos = select(el).offsetTop
@@ -75,22 +75,27 @@
     })
   }
 
-  /**
-   * Toggle .header-scrolled class to #header when page is scrolled
-   */
-  let selectHeader = select('#header')
-  if (selectHeader) {
-    const headerScrolled = () => {
-      if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
-      } else {
-        selectHeader.classList.remove('header-scrolled')
-      }
-    }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
-  }
 
+  /**
+   * Header fixed top on scroll
+   */
+   let selectHeader = select('#header')
+   if (selectHeader) {
+     let headerOffset = selectHeader.offsetTop
+     let nextElement = selectHeader.nextElementSibling
+     const headerFixed = () => {
+       if ((headerOffset - window.scrollY) <= 0) {
+         selectHeader.classList.add('fixed-top')
+         nextElement.classList.add('scrolled-offset')
+       } else {
+         selectHeader.classList.remove('fixed-top')
+         nextElement.classList.remove('scrolled-offset')
+       }
+     }
+     window.addEventListener('load', headerFixed)
+     onscroll(document, headerFixed)
+   }
+ 
   /**
    * Back to top button
    */
@@ -106,6 +111,19 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+
+  
+  /**
+     * Preloader
+     */
+  let preloader = select('#preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+    preloader.remove()
+    });
+  }
+
+
 
   /**
    * Mobile nav toggle
