@@ -1,3 +1,9 @@
+<?php
+
+  $mda = json_decode($rutaArticulos["multimedia"],true);
+
+?>
+
 
         <!-- ======= Blog Single Section ======= -->
         <section id="blog" class="blog">
@@ -10,11 +16,68 @@
             <article class="entry entry-single">
 
               <div class="entry-img">
-                <img src="<?php echo $servidor.$rutaArticulos["portada"]; ?>" alt="" class="img-fluid">
+                
+
+
+
+              
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+                  <div class="carousel-indicators">
+
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <?php
+                      for($i = 1; $i <= count($mda); ++$i) {
+                        echo '<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="'.$i.'" aria-label="Slide 2"></button>';
+                      }
+                    ?>
+                    
+                  </div>
+                  <div class="carousel-inner">  
+                    
+                    <?php
+
+                      echo '
+                      <div class="carousel-item active">
+                        <img src="'.$servidor.$rutaArticulos["portada"].'" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                      </div>
+                      ';
+                      
+                      for($i = 0; $i < count($mda); ++$i) {
+
+                        echo '
+                        <div class="carousel-item">
+                          <img src="'.$servidor.$mda[$i]["foto"].'" class="d-block w-100" alt="...">
+                          <div class="carousel-caption d-none d-md-block">
+                          </div>
+                        </div>
+                        ';
+                        
+                      }
+                    ?>
+
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+
+
+
+
+                
+              
               </div>
 
+
               <h2 class="entry-title">
-                <a href="blog-single.html"><?php echo $rutaArticulos["titulo"]; ?></a>
+                <a href="#"><?php echo $rutaArticulos["titulo"]; ?></a>
               </h2>
 
               <div class="entry-meta">

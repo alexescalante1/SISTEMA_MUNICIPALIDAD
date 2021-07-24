@@ -9,7 +9,7 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="<?php echo $url; ?>">Inicio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Noticias</a></li>
+          <li><a class="nav-link scrollto" href="#recent-blog-posts">Noticias</a></li>
           <li class="dropdown"><a href="#"><span>Puno</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Histori</a></li>
