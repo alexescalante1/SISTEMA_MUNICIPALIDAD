@@ -19,20 +19,20 @@ RUTA ARTICULO
 
 function limpiarURL(texto){
 	var texto = texto.toLowerCase(); 
-	texto = texto.replace(/[á]/, 'a');
-	texto = texto.replace(/[é]/, 'e');
-	texto = texto.replace(/[í]/, 'i');
-	texto = texto.replace(/[ó]/, 'o');
-	texto = texto.replace(/[ú]/, 'u');
-	texto = texto.replace(/[ñ]/, 'n');
+	texto = texto.replace(/[á]/g, 'a');
+	texto = texto.replace(/[é]/g, 'e');
+	texto = texto.replace(/[í]/g, 'i');
+	texto = texto.replace(/[ó]/g, 'o');
+	texto = texto.replace(/[ú]/g, 'u');
+	texto = texto.replace(/[ñ]/g, 'n');
 	texto = texto.replace(/ /g, "-");
-	texto = texto.replace(/'/g, "-");
-	texto = texto.replace(/"/g, "-");
-	texto = texto.replace(/”/g, "-");
-	texto = texto.replace(/“/g, "-");
-	texto = texto.replace(/¨/g, "-");
-	texto = texto.replace(/´/g, "-");
-	texto = texto.replace(/[:]/g, "")
+	texto = texto.replace(/'/g, "");
+	texto = texto.replace(/"/g, "");
+	texto = texto.replace(/”/g, "");
+	texto = texto.replace(/“/g, "");
+	texto = texto.replace(/¨/g, "");
+	texto = texto.replace(/´/g, "");
+	texto = texto.replace(/[@ªº!|@·#$~%€&¬/()=?¿'¡çÇ}`+¨*:;.,]/g, "");
 	return texto;
   }
   

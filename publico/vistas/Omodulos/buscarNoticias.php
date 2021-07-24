@@ -11,63 +11,63 @@
 
 		<?php
 		
-		/*=============================================
-		LLAMADO DE PAGINACIÓN
-		=============================================*/
+			/*=============================================
+			LLAMADO DE PAGINACIÓN
+			=============================================*/
 
-		if(isset($rutas[1])){
+			if(isset($rutas[1])){
 
-			$base = ($rutas[1] - 1)*6;
-			$tope = 6;
+				$base = ($rutas[1] - 1)*6;
+				$tope = 6;
 
-		}else{
+			}else{
 
-			$rutas[1] = 1;
-			$base = 0;
-			$tope = 6;
-			
-		}
-
-
-		$Objetos = null;
-		$listaObjetos = null;
-
-		if(isset($rutas[3])){
-
-			$busqueda = $rutas[3];
-
-			$Objetos = ControladorGeneral::ctrBuscar("detallearticulo", $busqueda, "titulo", "DESC", $base, $tope);
-			$listaObjetos = ControladorGeneral::ctrListarBusqueda("detallearticulo", $busqueda);
-
-		}
-
-		if(!$Objetos){
-
-			echo '
-			<div class="col-xs-12 error404 text-center">
-				<h1><small>¡Oops!</small></h1>
-				<h2>Aún no hay Objetos en esta sección</h2>
-			</div>
-			';
-
-		}else{
-
-			foreach ($Objetos as $key => $value) {
+				$rutas[1] = 1;
+				$base = 0;
+				$tope = 6;
 				
-				echo '
-				<div class="col-lg-4">
-				<div class="post-box">
-					<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
-					<span class="post-date">Tue, September 15</span>
-					<h3 class="post-title">'.$value["titulo"].'</h3>
-					<a href="'.$url.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-				</div>
-				</div>
-				';
+			}
+
+
+			$Objetos = null;
+			$listaObjetos = null;
+
+			if(isset($rutas[3])){
+
+				$busqueda = $rutas[3];
+
+				$Objetos = ControladorGeneral::ctrBuscar("publicar", $busqueda, "titulo", "DESC", $base, $tope);
+				$listaObjetos = ControladorGeneral::ctrListarBusqueda("publicar", $busqueda);
 
 			}
 
-		}
+			if(!$Objetos){
+
+				echo '
+				<div class="col-xs-12 error404 text-center">
+					<h1><small>¡Oops!</small></h1>
+					<h2>Aún no hay Objetos en esta sección</h2>
+				</div>
+				';
+
+			}else{
+
+				foreach ($Objetos as $key => $value) {
+					
+					echo '
+					<div class="col-lg-4">
+					<div class="post-box">
+						<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
+						<span class="post-date">Tue, September 15</span>
+						<h3 class="post-title">'.$value["titulo"].'</h3>
+						<a href="'.$url.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+					</div>
+					</div>
+					';
+
+				}
+
+			}
 		
 		?>
 

@@ -1,16 +1,15 @@
 <!-- ======= Recent Blog Posts Section ======= -->
 <section id="recent-blog-posts" class="recent-blog-posts">
-	<div class="container" data-aos="fade-up">
-	<header class="section-header">
+	<div class="container">
+	<header class="section-header" data-aos="fade-up">
 		<h2>ACTUALIDAD</h2>
 		<p>NOTICIAS</p>
 	</header>
-	<div class="row">
+	<div class="row" data-aos="fade-up">
 
 		<?php
 
-		$Objetos = ControladorGeneral::ctrMostrar("detallearticulo", "prestados", null, null, 0, 4, "DESC");
-		$listaObjetos = ControladorGeneral::ctrListar("detallearticulo", null, null);
+		$Objetos = ControladorGeneral::ctrMostrar("publicar", "fecha", "categoria", 1, 0, 3, "DESC");
 
 		if(!$Objetos){
 
@@ -26,12 +25,12 @@
 			foreach ($Objetos as $key => $value) {
 				
 				echo '
-				<div class="col-lg-3">
+				<div class="col-lg-4">
 				<div class="post-box">
 					<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
 					<span class="post-date">Tue, September 15</span>
 					<h3 class="post-title">'.$value["titulo"].'</h3>
-					<a href="'.$url.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+					<a href="'.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 				</div>
 				</div>
 				';
@@ -44,15 +43,14 @@
 
 	</div>
     
-	<header class="section-header">
+	<header class="section-header" data-aos="fade-up">
 		<p>PROXIMAS ACTIVIDADES</p>
 	</header>
-	<div class="row">
+	<div class="row" data-aos="fade-up">
 
 		<?php
 
-		$Objetos = ControladorGeneral::ctrMostrar("detallearticulo", "prestados", null, null, 4, 4, "DESC");
-		$listaObjetos = ControladorGeneral::ctrListar("detallearticulo", null, null);
+		$Objetos = ControladorGeneral::ctrMostrar("publicar", "fecha", "categoria", 2, 0, 3, "DESC");
 
 		if(!$Objetos){
 
@@ -68,12 +66,12 @@
 			foreach ($Objetos as $key => $value) {
 				
 				echo '
-				<div class="col-lg-3">
+				<div class="col-lg-4">
 				<div class="post-box">
 					<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
 					<span class="post-date">Tue, September 15</span>
 					<h3 class="post-title">'.$value["titulo"].'</h3>
-					<a href="'.$url.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+					<a href="'.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 				</div>
 				</div>
 				';
@@ -87,15 +85,14 @@
 	</div>
 
 
-	<header class="section-header">
+	<header class="section-header" data-aos="fade-up">
 		<p>OBRAS REALIZADAS</p>
 	</header>
-	<div class="row">
+	<div class="row" data-aos="fade-up">
 
 		<?php
 
-		$Objetos = ControladorGeneral::ctrMostrar("detallearticulo", "prestados", null, null, 8, 4, "DESC");
-		$listaObjetos = ControladorGeneral::ctrListar("detallearticulo", null, null);
+		$Objetos = ControladorGeneral::ctrMostrar("publicar", "fecha", "categoria", 3, 0, 3, "DESC");
 
 		if(!$Objetos){
 
@@ -111,12 +108,12 @@
 			foreach ($Objetos as $key => $value) {
 				
 				echo '
-				<div class="col-lg-3">
+				<div class="col-lg-4">
 				<div class="post-box">
 					<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
 					<span class="post-date">Tue, September 15</span>
 					<h3 class="post-title">'.$value["titulo"].'</h3>
-					<a href="'.$url.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+					<a href="'.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 				</div>
 				</div>
 				';

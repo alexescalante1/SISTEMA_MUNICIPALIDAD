@@ -127,6 +127,7 @@
 	$rutas = array();
 	$ruta = null;
 	$infoArticulos = null;
+	$MClase = null;
 
 	if(isset($_GET["ruta"])){
 
@@ -139,7 +140,7 @@
 		URL'S AMIGABLES DE PUBLICACIONES
 		=============================================*/
 
-		$rutaArticulos = ControladorGeneral::ctrMostrarInfo("detallearticulo", $item, $valor);
+		$rutaArticulos = ControladorGeneral::ctrMostrarInfo("publicar", $item, $valor);
 		
 		if($rutas[0] == $rutaArticulos["ruta"]){
 
@@ -153,21 +154,36 @@
 
 		if($ruta != null || $rutas[0] == "mas-noticias"){
 
+			$MClase = 0;
 			include "Omodulos/blog.php";
-			include "Omodulos/todasNoticias.php";
 
 		}else if($infoArticulos != null){
 			
 			include "Omodulos/blogInfo.php";
 
+		}else if($rutas[0] == "buscador"){
+			
+			include "Omodulos/blogBuscador.php";
+			//include "Omodulos/buscarNoticias.php";
+
+		}else if($rutas[0] == "CNoticia"){
+			
+			$MClase = 1;
+			include "Omodulos/blog.php";
+
+		}else if($rutas[0] == "CProxAct"){
+			
+			$MClase = 2;
+			include "Omodulos/blog.php";
+
+		}else if($rutas[0] == "CObrasRe"){
+			
+			$MClase = 3;
+			include "Omodulos/blog.php";
+
 		}else if($rutas[0] == "gerencias" || $rutas[0] == "nesaPartes"){
 
 			include "Omodulos/".$rutas[0].".php";
-
-		}else if($rutas[0] == "buscador"){
-			
-			include "Omodulos/blog.php";
-			include "Omodulos/buscarNoticias.php";
 
 		}else if($rutas[0] == "inicio"){
 
@@ -175,7 +191,7 @@
 			include "Omodulos/servicios.php";
 			include "Omodulos/quienesSomos.php";
 			include "Omodulos/Inoticias.php";
-			include "Omodulos/infoCarousel.php";
+			//include "Omodulos/infoCarousel.php";
 			include "Omodulos/preguntasF.php";
 
 		}else{
@@ -190,7 +206,7 @@
 		include "Omodulos/servicios.php";
 		include "Omodulos/quienesSomos.php";
 		include "Omodulos/Inoticias.php";
-		include "Omodulos/infoCarousel.php";
+		//include "Omodulos/infoCarousel.php";
 		include "Omodulos/preguntasF.php";
 
 	}
@@ -222,8 +238,6 @@
 	<script src="<?php echo $url; ?>vistas/js/mios.js"></script>
 	<script src="<?php echo $url; ?>vistas/js/buscador.js"></script>
 	
-
-
   	<!--<script src="<?php echo $url; ?>vistas/js/cabezote.js"></script>
 	<script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>
 	

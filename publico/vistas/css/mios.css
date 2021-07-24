@@ -97,3 +97,8 @@ MOVIL (XS revisamos en 320px)
 	}
 
 }
+
+.PVideo iframe{
+	width: 280px;
+	height: 160px;
+}

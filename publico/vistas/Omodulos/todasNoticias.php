@@ -1,10 +1,3 @@
-<?php
-
-$servidor = Ruta::ctrRutaServidor();
-$url = Ruta::ctrRuta();
-$ruta = $rutas[0];
-
-?>
 
 <!-- ======= Recent Blog Posts Section ======= -->
 <section id="recent-blog-posts" class="recent-blog-posts">
@@ -17,53 +10,53 @@ $ruta = $rutas[0];
 
 		<?php
 		
-		/*=============================================
-		LLAMADO DE PAGINACIÓN
-		=============================================*/
+			/*=============================================
+			LLAMADO DE PAGINACIÓN
+			=============================================*/
 
-		if(isset($rutas[1]) && preg_match('/^[0-9]+$/', $rutas[1])){
+			if(isset($rutas[1]) && preg_match('/^[0-9]+$/', $rutas[1])){
 
-			$base = ($rutas[1] - 1)*12;
-			$tope = 12;
+				$base = ($rutas[1] - 1)*8;
+				$tope = 8;
 
-		}else{
+			}else{
 
-			$rutas[1] = 1;
-			$base = 0;
-			$tope = 12;
-			
-		}
-
-		$Objetos = ControladorGeneral::ctrMostrar("detallearticulo", "prestados", null, null, $base, $tope, "DESC");
-		$listaObjetos = ControladorGeneral::ctrListar("detallearticulo", null, null);
-
-		if(!$Objetos){
-
-			echo '
-			<div class="col-xs-12 error404 text-center">
-				<h1><small>¡Oops!</small></h1>
-				<h2>Aún no hay Objetos en esta sección</h2>
-			</div>
-			';
-
-		}else{
-
-			foreach ($Objetos as $key => $value) {
+				$rutas[1] = 1;
+				$base = 0;
+				$tope = 8;
 				
+			}
+
+			$Objetos = ControladorGeneral::ctrMostrar("publicar", "vistas", null, null, $base, $tope, "DESC");
+			$listaObjetos = ControladorGeneral::ctrListar("publicar", null, null);
+
+			if(!$Objetos){
+
 				echo '
-				<div class="col-lg-4">
-				<div class="post-box">
-					<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
-					<span class="post-date">Tue, September 15</span>
-					<h3 class="post-title">'.$value["titulo"].'</h3>
-					<a href="'.$url.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
-				</div>
+				<div class="col-xs-12 error404 text-center">
+					<h1><small>¡Oops!</small></h1>
+					<h2>Aún no hay Objetos en esta sección</h2>
 				</div>
 				';
 
-			}
+			}else{
 
-		}
+				foreach ($Objetos as $key => $value) {
+					
+					echo '
+					<div class="col-lg-4" >
+					<div class="post-box">
+						<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
+						<span class="post-date">Tue, September 15</span>
+						<h3 class="post-title">'.$value["titulo"].'</h3>
+						<a href="'.$url.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+					</div>
+					</div>
+					';
+
+				}
+
+			}
 		
 		?>
 
@@ -86,7 +79,7 @@ $ruta = $rutas[0];
 
 		if($listaObjetos != 0){
 
-			$pagObjetos = ceil($listaObjetos/12);
+			$pagObjetos = ceil($listaObjetos/8);
 
 			if($pagObjetos > 4){
 
