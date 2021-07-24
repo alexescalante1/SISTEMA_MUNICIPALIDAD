@@ -41,7 +41,7 @@
                       </div>
                     </div>
                     <div class="member-info">
-                      <h4>Walter White</h4>
+                      <h4>'.$value["encargado"].'</h4>
                       <span>'.$value["titulo"].'</span>
                       <p>+51 '.$value["contacto"].'</p>
                     </div>

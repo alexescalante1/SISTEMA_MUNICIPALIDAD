@@ -65,19 +65,7 @@
   <link href="<?php echo $url; ?>vistas/assets/css/style.css" rel="stylesheet">
 
 
-
-
-
-
-
-
-
-
-
-	<!--<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plantilla.css">-->
-
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/mios.css">
-
 
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/font-awesome.min.css">
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/flexslider.css">
@@ -237,14 +225,6 @@
 
 	<script src="<?php echo $url; ?>vistas/js/mios.js"></script>
 	<script src="<?php echo $url; ?>vistas/js/buscador.js"></script>
-	
-  	<!--<script src="<?php echo $url; ?>vistas/js/cabezote.js"></script>
-	<script src="<?php echo $url; ?>vistas/js/plantilla.js"></script>
-	
-	<script src="<?php echo $url; ?>vistas/js/infoproducto.js"></script>
-	<script src="<?php echo $url; ?>vistas/js/usuarios.js"></script>
-	<script src="<?php echo $url; ?>vistas/js/notificacion.js"></script>
-	<script src="<?php echo $url; ?>vistas/js/visitas.js"></script>-->
 
 </body>
 
