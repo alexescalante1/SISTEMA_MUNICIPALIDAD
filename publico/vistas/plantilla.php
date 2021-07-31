@@ -86,12 +86,12 @@
 	<script src="<?php echo $url; ?>vistas/js/plugins/dscountdown.min.js"></script>
 	<script src="<?php echo $url; ?>vistas/js/plugins/knob.jquery.js"></script>
 
-  <!-- =======================================================
-  * Template Name: FlexStart - v1.4.0
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+	<!-- =======================================================
+	* Template Name: FlexStart - v1.4.0
+	* Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+	* Author: BootstrapMade.com
+	* License: https://bootstrapmade.com/license/
+	======================================================== -->
 </head>
 
 <body>
@@ -172,6 +172,10 @@
 		}else if($rutas[0] == "gerencias" || $rutas[0] == "nesaPartes"){
 
 			include "Omodulos/".$rutas[0].".php";
+
+		}else if($rutas[0] == "mision" || $rutas[0] == "vision"){
+
+			include "pages/".$rutas[0].".php";
 
 		}else if($rutas[0] == "inicio"){
 

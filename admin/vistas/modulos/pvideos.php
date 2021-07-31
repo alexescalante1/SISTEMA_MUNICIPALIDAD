@@ -91,6 +91,8 @@
 
                                               $acciones = "<div class='btn-group'><button class='btn btn-danger btnEliminarVideo' idPvideos='".$pvideo[$key]["idPvideos"]."'><i class='fa fa-times'></i></button></div>";
 
+                                              //<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CFPLIaMpGrY" allowfullscreen></iframe>
+
                                               echo '
                                               <tr>
                                                 <td>'.$key.'</td>

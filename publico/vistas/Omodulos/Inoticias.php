@@ -22,13 +22,18 @@
 
 		}else{
 
+			$array = array("01" => "Enero","02" => "Febrero","03" => "Marzo","04" => "Abril","05" => "Mayo","06" => "Junio","07" => "Julio");
+			
 			foreach ($Objetos as $key => $value) {
-				
+				$numDay = date("D", strtotime($value["fecha"]));
+				$numMes = date("m", strtotime($value["fecha"]));
+				$numYear = date("Y", strtotime($value["fecha"]));
+
 				echo '
 				<div class="col-lg-4">
 				<div class="post-box">
 					<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
-					<span class="post-date">Tue, September 15</span>
+					<span class="post-date">'.$numDay.', '.$array[$numMes].' '.$numYear.'</span>
 					<h3 class="post-title">'.$value["titulo"].'</h3>
 					<a href="'.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 				</div>
@@ -64,12 +69,14 @@
 		}else{
 
 			foreach ($Objetos as $key => $value) {
-				
+				$numDay = date("D", strtotime($value["fecha"]));
+				$numMes = date("m", strtotime($value["fecha"]));
+				$numYear = date("Y", strtotime($value["fecha"]));
 				echo '
 				<div class="col-lg-4">
 				<div class="post-box">
 					<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
-					<span class="post-date">Tue, September 15</span>
+					<span class="post-date">'.$numDay.', '.$array[$numMes].' '.$numYear.'</span>
 					<h3 class="post-title">'.$value["titulo"].'</h3>
 					<a href="'.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 				</div>
@@ -106,12 +113,14 @@
 		}else{
 
 			foreach ($Objetos as $key => $value) {
-				
+				$numDay = date("D", strtotime($value["fecha"]));
+				$numMes = date("m", strtotime($value["fecha"]));
+				$numYear = date("Y", strtotime($value["fecha"]));
 				echo '
 				<div class="col-lg-4">
 				<div class="post-box">
 					<div class="post-img"><img src="'.$servidor.$value["portada"].'" class="img-fluid" alt=""></div>
-					<span class="post-date">Tue, September 15</span>
+					<span class="post-date">'.$numDay.', '.$array[$numMes].' '.$numYear.'</span>
 					<h3 class="post-title">'.$value["titulo"].'</h3>
 					<a href="'.$value["ruta"].'" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
 				</div>

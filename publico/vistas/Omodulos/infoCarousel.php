@@ -7,8 +7,8 @@
           <h2>Nuevos</h2>
           <p>VIDEOS</p>
         </header>
-
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="200">
+        
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="10000">
           <div class="swiper-wrapper">
 
 

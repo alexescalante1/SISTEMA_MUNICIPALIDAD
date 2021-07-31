@@ -21,7 +21,7 @@
           </li>
           <li class="dropdown"><a href="#"><span>Municipalidad</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Vision</a></li>
+              <li><a href="vision">Vision</a></li>
               <li><a href="#">Organigrama</a></li>
               <li><a href="#">Consejo Municipal</a></li>
               <li><a href="#">Ley Organica de Municipalidades</a></li>

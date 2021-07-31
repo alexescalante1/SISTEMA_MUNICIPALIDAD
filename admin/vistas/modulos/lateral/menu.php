@@ -66,8 +66,23 @@ MENU
         </p>
       </a>
     </li>
-    
-
+    <li class="nav-header">GENERADOR DE REPORTE</li>
+    <li class="nav-item">
+      <a href="reporte" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+        <p>
+          Por Dias
+        </p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="reportefecha" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+        <p>
+          Por Fecha y Hora
+        </p>
+      </a>
+    </li>
     <li class="nav-header">GESTOR DE CUENTAS</li>
     <?php
 

@@ -30,7 +30,4 @@ if(isNaN(pagActual)){
 
    $("#item"+pagActual).addClass("active");
    
- 
 }
-
-
