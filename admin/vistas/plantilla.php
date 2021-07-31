@@ -93,6 +93,7 @@ session_start();
            $_GET["ruta"]== "carrusel" ||
            $_GET["ruta"]== "reporte" ||
            $_GET["ruta"]== "reportefecha" ||
+           $_GET["ruta"]== "reporteoficina" ||
            $_GET["ruta"]== "gerencias" ||
            $_GET["ruta"]== "salir"){
           

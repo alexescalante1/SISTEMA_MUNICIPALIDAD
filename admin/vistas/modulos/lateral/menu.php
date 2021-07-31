@@ -83,6 +83,14 @@ MENU
         </p>
       </a>
     </li>
+    <li class="nav-item">
+      <a href="reporteoficina" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+        <p>
+          Por Gerencias
+        </p>
+      </a>
+    </li>
     <li class="nav-header">GESTOR DE CUENTAS</li>
     <?php
 

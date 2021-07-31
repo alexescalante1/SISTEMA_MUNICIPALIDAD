@@ -41,6 +41,101 @@ $feriados = array('2021-07-28', '2021-07-29');
 $meses = array(1=>'Jan', 2=>'Feb', 3=>'Mar', 4=>'Apr', 5=>'May', 6=>'Jun', 7=>'Jul', 8=>'Aug', 9=>'Sep', 10=>'Oct', 11=>'Nov', 12=>'Dec');
 $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=>'Junio', 7=>'Julio', 8=>'Agosto', 9=>'Septiembre', 10=>'Octubre', 11=>'Noviembre', 12=>'Diciembre');
 
+
+$gerencias1 = array(
+  'Gerencia de Transportes y Seguridad Vial',
+  'Subgerencia de Registro de Transportes',
+  'Subgerencia de Inspecciones de Tránsito',
+  'Gerencia de Planificación y Presupuesto',
+  'Subgerencia de Actividades Económicas',
+  'Gerencia de Administración Tributaria',
+  'Casa de la Cultura',
+  'Fase Instructora',
+  'Oficina de Ejecución Coactiva',
+  'Omaped',
+  'Gerencia de Asesoría Jurídica',
+  'Unidad de Registro Civil',
+  'Gerencia Municipal',
+  'Subgerencia de limpieza y recolección',
+  'Gerencia de Ingeniería Municipal'
+  );
+
+$gerencias2 = array(
+  'Subgerencia de Inspecciones de Tránsito',                                       
+  'Subgerencia de Registro de Transportes',
+  'Gerencia de Transportes y Seguridad Vial',
+  'Subgerencia de limpieza y recolección',
+  'Subgerencia de Parques, Jardines y Conservación de Áreas Verdes',
+  'Gerencia de Desarrollo Urbano',
+  'Asesoria Legal - Gerencia de Transporte y Seguridad Vial',
+  '2455252',
+  'IVP-Puno',
+  'Gerencia de Turismo y Desarrollo Económico',
+  'Subgerencia de Actividades Económicas',
+  'Subgerencia de Planeamiento y Control Urbano',
+  'Subgerencia de Gestión Ambiental y Salud Pública',
+  'Gerencia de Planificación y Presupuesto'
+  );
+
+
+$gerencias3 = array(
+  'Subgerencia de Actividades Económicas',
+  'Subgerencia de Personal',
+  'Secretaría General',
+  'Subgerencia de Promoción de Educación, Cultura y Deporte',
+  'Alcaldía y Asesoria de Alcaldia',
+  'Gerencia de Turismo y Desarrollo Económico',
+  'Oficina de Ejecución Coactiva',
+  'SALA DE REGIDORES',
+  'Unidad de Registro Civil',
+  'Oficina de Defensa Civil',
+  'Subgerencia de Parques, Jardines y Conservación de Áreas Verdes',
+  'Gerencia Municipal',
+  'Gerencia de Planificación y Presupuesto',
+  'Subgerencia de Logística',
+  'Gerencia de Desarrollo Humano y Participación Ciudadana',
+  'Gerencia de Gestión Integral de Residuos Solidos',
+  'Subgerencia de Formulación y Evaluación de Proyectos, y Cooperación Técnica Internacional',
+  'Gerencia de Desarrollo Urbano',
+  'Gerencia de Administración Tributaria',
+  'Gerencia de Administración',
+  'Subgerencia de Tesorería',
+  'Gerencia de Transportes y Seguridad Vial',
+  'Subgerencia de Protección Ciudadana y Defensa Civil',
+  'Programa Especial de Complejos Culturales y Recreativos',
+  'Subgerencia de Estudios Definitivos',
+  'Oficina de Supervisión y Liquidación de Inversiones',
+  'Programa Especial de la Bahía del Lago',
+  'Subgerencia de Turismo y Comercio Exterior',
+  'Subgerencia de Obras Públicas y Mantenimiento',
+  'Subgerencia de Gestión Ambiental y Salud Pública',
+  'Gerencia de Ingeniería Municipal',
+  'Unidad de Imagen Institucional y Protocolo',
+  'Unidad de Archivo',
+  'Gerencia de Medio Ambiente, Saneamiento y Servicios',
+  'Gerencia de Asesoría Jurídica',
+  'Programa Especial Terminal Terrestre',
+  'Subgerencia de Promoción Empresarial y Desarrollo Económico Rural',
+  'Comisión Central de la Festividad Virgen de la Candelaria 2020',
+  'Procuraduría Pública Municipal',
+  'Oficina de Atención y Orientación al Vecino',
+  'Unidad Local de Empadronamiento - SISFOH',
+  'Subgerencia de Promoción Social y Participación Ciudadana',
+  'Subgerencia de Planeamiento y Control Urbano',
+  'Subgerencia de Planificación y Programación Multianual de Inversiones',
+  'Subgerencia de Registro de Transportes',
+  'IVP-Puno',
+  'Centro Comercial Ramis',
+  'Comité Provincial de Administración del Programa Vaso de Leche',
+  'Subgerencia de Contabilidad',
+  'Subgerencia de Desarrollo de la Mujer,Niño,Adolescente y Adulto Mayor',
+  'Programa Especial de Operación y Mantenimiento de Maquinaria y Equipo (Taller)',
+  'Subgerencia de Catastro',
+  'Oficina de Patrimonio',
+  '2211301'
+  );
+
+
 ?>
 
 
@@ -70,6 +165,11 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
   <section class="content">
     <div class="container-fluid">
 
+
+   
+
+
+          
 
       <!-- Main row -->
       <div class="row">
@@ -114,7 +214,6 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
                                     <thead>
                                     <tr>
                                       <th style="width:10px">#</th>
-                                      <th>FECHA EN</th>
                                       <th>FECHA ES</th>
                                       <th>FORMULA</th>
                                     </tr>
@@ -124,59 +223,38 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
 
                                     <?php
 
-                                        $FECHA_LABORAL = null;
-                                        $CYEARI = null;
-                                        $CYEARF = null;
-                                        $DATE =   null;
-                                        $DIADATE = null;
-                                        
-                                        $j = 2020;
+                                        $j = 2029;
                                         $TABLAV_I = "E2";
                                         $TABLAV_F = "E21309";
+
+                                        $TABLAV_GI = "G2";
+                                        $TABLAV_GF = "G21309";
+
                                         $FORMULA = null;
                                         $IDCONT = 0;
                                         
                                         for($i=1;$i<=12;$i++){
-                                            $ndias = cal_days_in_month(CAL_GREGORIAN, $i, $j);
-                                            if($i<10){
-                                                $CYEARI = $j."-0".$i."-01";
-                                                $CYEARF = $j."-0".$i."-".$ndias;
-                                            }else{
-                                                $CYEARI = $j."-".$i."-01";  
-                                                $CYEARF = $j."-".$i."-".$ndias;  
-                                            }
-                                            foreach(getDiasHabiles($CYEARI, $CYEARF, $feriados) as $key => $value){
-                                                  
-                                                  if($i<10){
-                                                    $DATE = $j."-0".$i."-".$value[8].$value[9];
-                                                  }else{
-                                                    $DATE = $j."-".$i."-".$value[8].$value[9];
-                                                  }
-                                                  $DIADATE = get_nombre_dia($DATE);
+                                            
+                                            //=CONTAR.SI.CONJUNTO(G1:G684;"Gerencia de Transportes y Seguridad Vial";E1:E684;"Apr*")
+                                            foreach($gerencias3 as $key => $value){
+                                                
+                                                $FORMULA = '=CONTAR.SI.CONJUNTO('.$TABLAV_GI.':'.$TABLAV_GF.';"'.$value.'";'.$TABLAV_I.':'.$TABLAV_F.';"'.$meses[$i].'*")<br>';
                                               
-                                                  if($value[8]=="0"){
-                                                    $FECHA_LABORAL = $meses[$i]." ".$value[9]." ".$j;
-                                                  }else{
-                                                    $FECHA_LABORAL = $meses[$i]." ".$value[8].$value[9]." ".$j;
-                                                  }
-                                                  $FORMULA = '=CONTAR.SI('.$TABLAV_I.':'.$TABLAV_F.';"'.$FECHA_LABORAL.'*")';
+                                                echo '
+                                                <tr>
+                                                  <td>'.$IDCONT.'</td>
+                                                  <td>'.$value.'</td>
+                                                  <td>'.$FORMULA.'</td>
+                                                </tr>
+                                                ';
+                                                $IDCONT = $IDCONT + 1;
 
-                                                  echo '
-                                                  <tr>
-                                                    <td>'.$IDCONT.'</td>
-                                                    <td>'.$FECHA_LABORAL.'</td>
-                                                    <td>'.$DIADATE.', '.$value[8].$value[9].' de '.$mesesEs[$i].' del '.$j.'</td>
-                                                    <td>'.$FORMULA.'</td>
-                                                  </tr>
-                                                  ';
-                                                  $IDCONT = $IDCONT + 1;
                                             }
 
                                             for($Rp = 0; $Rp < 10 ; $Rp++){
                                                 echo '
                                                 <tr>
                                                   <td>'.$IDCONT.'</td>
-                                                  <td></td>
                                                   <td></td>
                                                   <td></td>
                                                 </tr>
@@ -194,7 +272,6 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
                                     <tfoot>
                                     <tr>
                                       <th>#</th>
-                                      <th>FECHA EN</th>
                                       <th>FECHA ES</th>
                                       <th>FORMULA</th>
                                     </tr>

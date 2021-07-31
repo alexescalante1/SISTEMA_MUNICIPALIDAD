@@ -199,9 +199,9 @@ $arrHrMn[] = "05:30";
                                       $FORMULA = null;
 
 
-                                      $j=2019;
+                                      $j=2020;
                                       $TABLAV_I = "E2";
-                                      $TABLAV_F = "E10747";
+                                      $TABLAV_F = "E21309";
                                       $IDCONT = 0;
                                       $HoraMin = 0;
                                       
