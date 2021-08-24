@@ -21,7 +21,97 @@ MENU
 <nav class="mt-2">
   <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
     
+    <li class="nav-header">TRAMITE DOCUMENTARIO</li>
+    
+    <li class="nav-item">
+      <a href="reportefecha" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+        <p>
+          MESA VIRTUAL
+        </p>
+      </a>
+    </li>
+    
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-copy"></i>
+        <p>
+          REGISTRO
+          <i class="fas fa-angle-left right"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="ingDocTupa" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>DOC CON TUPA</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="ingDocSTupa" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>DOC SIN TUPA</p>
+          </a>
+        </li>
+        
+      </ul>
+    </li>
 
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-copy"></i>
+        <p>
+          BANDEJA
+          <i class="fas fa-angle-left right"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="ingDocTupa" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>PENDIENTES</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="ingDocSTupa" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>DERIVADOS</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="ingDocSTupa" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>FINALIZADOS</p>
+          </a>
+        </li>
+        
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-copy"></i>
+        <p>
+          CONSULTA
+          <i class="fas fa-angle-left right"></i>
+        </p>
+      </a>
+      <ul class="nav nav-treeview">
+        <li class="nav-item">
+          <a href="ingDocTupa" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>DOC GENERALES</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="ingDocSTupa" class="nav-link">
+            <i class="far fa-circle nav-icon"></i>
+            <p>TRAMITES TUPA</p>
+          </a>
+        </li>
+        
+      </ul>
+    </li>
 
     <li class="nav-header">GESTOR DE VISTAS</li>
 

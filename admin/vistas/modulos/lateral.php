@@ -4,7 +4,7 @@
 	<!-- Brand Logo -->
     <a href="inicio" class="brand-link">
       <img src="vistas/img/plantilla/logo-only.png" alt="AdminLTE Logo" class="brand-image elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">ISTP HUANCANE</span>
+      <span class="brand-text font-weight-light">MUNICIPIO PUNO</span>
     </a>
 
     <!-- Sidebar -->

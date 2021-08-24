@@ -29,10 +29,10 @@ function get_nombre_dia($fecha){
     case 0: return "Domingo"; break;
     case 1: return "Lunes"; break;
     case 2: return "Martes"; break;
-    case 3: return "Miercoles"; break;
+    case 3: return "Miércoles"; break;
     case 4: return "Jueves"; break;
     case 5: return "Viernes"; break;
-    case 6: return "Sabado"; break;
+    case 6: return "Sábado"; break;
   }
 }
 
@@ -40,6 +40,8 @@ $feriados = array('2021-07-28', '2021-07-29');
 
 $meses = array(1=>'Jan', 2=>'Feb', 3=>'Mar', 4=>'Apr', 5=>'May', 6=>'Jun', 7=>'Jul', 8=>'Aug', 9=>'Sep', 10=>'Oct', 11=>'Nov', 12=>'Dec');
 $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=>'Junio', 7=>'Julio', 8=>'Agosto', 9=>'Septiembre', 10=>'Octubre', 11=>'Noviembre', 12=>'Diciembre');
+
+$param = ControladorPublicacion::ctrMostrar("reporteparametros","idRepParam", 1);
 
 ?>
 
@@ -82,7 +84,7 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
           <div class="card">
 
             <div class="card-header border-transparent">
-              <h3 class="card-title">CARRUSEL</h3>
+              <h3 class="card-title">REPORTE POR FECHA</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -101,6 +103,43 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
                   <!-- Main content -->
                 <section class="content">
                         <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-2">
+
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" class="form-control Pyear" placeholder="2020" value="<?php echo $param[0]["year"]; ?>" required>
+                                    </div>
+                                  </div>
+
+                            </div>
+                            <div class="col-md-2">
+
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <input type="text" class="form-control FcolumInit" placeholder="E0000" value="<?php echo $param[0]["columInit"]; ?>" required>
+                                    </div>
+                                  </div>
+
+                              </div>
+                              <div class="col-md-2">
+
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                    <input type="text" class="form-control FcolumFin" placeholder="E0000" value="<?php echo $param[0]["columFin"]; ?>" required>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-2">
+
+                                <a class="btn btn-sm btn-info float-right actParam">ACTUALIZAR</a>
+
+                              </div>
+                          </div>
+
+
                           <div class="row">
                             <div class="col-12">
 
@@ -123,16 +162,16 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
                                     
 
                                     <?php
-
+                                    
                                         $FECHA_LABORAL = null;
                                         $CYEARI = null;
                                         $CYEARF = null;
                                         $DATE =   null;
                                         $DIADATE = null;
                                         
-                                        $j = 2020;
-                                        $TABLAV_I = "E2";
-                                        $TABLAV_F = "E21309";
+                                        $j = $param[0]["year"];
+                                        $TABLAV_I = $param[0]["columInit"];
+                                        $TABLAV_F = $param[0]["columFin"];
                                         $FORMULA = null;
                                         $IDCONT = 0;
                                         
@@ -219,11 +258,7 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
 
             </div>
             <!-- /.card-body -->
-            <div class="card-footer clearfix">
 
-              <a class="btn btn-sm btn-info float-right" data-toggle="modal" data-target="#modalAgregarCimagen">AGREGAR NUEVA IMAGEN</a>
-              
-            </div>
             <!-- /.card-footer -->
           </div>
           <!-- /.card -->
@@ -267,82 +302,4 @@ $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=
 </div>
 <!-- /.content-wrapper -->
 
-
-
-
-
-
-
-
-
-
-<div class="modal fade" id="modalAgregarCimagen">
-  <div class="modal-dialog modal-xl">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">AGREGAR NUEVA IMAGEN</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          
-
-          
-          <div class="row">
-              <div class="col-md-10">
-
-                    <div class="form-group">
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fas fa-bolt" style="width:20px"></i></span>
-                        </div>
-                        <input type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="form-control tituloCimagen" placeholder="TITULO">
-                        <input type="hidden" class="form-control rutaCimagen" readonly>
-                      </div>
-                    </div>
-
-              </div>
-              <div class="col-md-2">
-
-                    <div class="form-group">
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fas fa-bolt" style="width:20px"></i></span>
-                        </div>
-                        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" class="form-control Cprioridad" placeholder="PRIORIDAD" required>
-                      </div>
-                    </div>
-
-                </div>
-          </div>
-
-          <div class="form-group">
-            <div class="input-group mb-3">
-              
-              <input type="file" id="filePR" class="SelIM fotoPrincipalA" accept="image/*">
-              
-              <label for="filePR" class="fileButton">
-                <i class="fas fa-file-image"></i> &nbsp; SUBIR FOTO PRINCIPAL 16:9 (10MB)
-              </label>
-
-              <img src="vistas/img/publicacion/default/default.png" class="previsualizarPrincipalA" width="100%" style="border-radius:5px;border: 2px solid rgba(0, 0, 0, 0.3);">
-
-            </div>
-          </div>
-          
-
-        
-      </div>
-      <div class="modal-footer justify-content-between">
-        <button type="button" class="btn btn-default" data-dismiss="modal">CERRAR</button>
-        <button type="button" class="btn btn-primary guardarCimagen">GUARDAR</button>
-
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- /.modal -->
 

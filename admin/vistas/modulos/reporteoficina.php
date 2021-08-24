@@ -41,6 +41,7 @@ $feriados = array('2021-07-28', '2021-07-29');
 $meses = array(1=>'Jan', 2=>'Feb', 3=>'Mar', 4=>'Apr', 5=>'May', 6=>'Jun', 7=>'Jul', 8=>'Aug', 9=>'Sep', 10=>'Oct', 11=>'Nov', 12=>'Dec');
 $mesesEs = array(1=>'Enero', 2=>'Febrero', 3=>'Marzo', 4=>'Abril', 5=>'Mayo', 6=>'Junio', 7=>'Julio', 8=>'Agosto', 9=>'Septiembre', 10=>'Octubre', 11=>'Noviembre', 12=>'Diciembre');
 
+$param = ControladorPublicacion::ctrMostrar("reporteparametros","idRepParam", 1);
 
 $gerencias1 = array(
   'Gerencia de Transportes y Seguridad Vial',
@@ -201,6 +202,45 @@ $gerencias3 = array(
                   <!-- Main content -->
                 <section class="content">
                         <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-md-2">
+
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" class="form-control Pyear" placeholder="2020" value="<?php echo $param[0]["year"]; ?>" required>
+                                    </div>
+                                  </div>
+
+                            </div>
+                            <div class="col-md-2">
+
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <input type="text" class="form-control FcolumInit" placeholder="E0000" value="<?php echo $param[0]["columInit"]; ?>" required>
+                                    </div>
+                                  </div>
+
+                              </div>
+                              <div class="col-md-2">
+
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                    <input type="text" class="form-control FcolumFin" placeholder="E0000" value="<?php echo $param[0]["columFin"]; ?>" required>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-2">
+
+                                <a class="btn btn-sm btn-info float-right actParam">ACTUALIZAR</a>
+
+                              </div>
+                          </div>
+
+
+
                           <div class="row">
                             <div class="col-12">
 
@@ -222,6 +262,7 @@ $gerencias3 = array(
                                     
 
                                     <?php
+
 
                                         $j = 2029;
                                         $TABLAV_I = "E2";

@@ -487,8 +487,8 @@ class ControladorPublicacion{
 
 					list($ancho, $alto) = getimagesize($datos["fotoPrincipal"]["tmp_name"]);	
 
-					$nuevoAncho = 1920;
-					$nuevoAlto = 1080;
+					$nuevoAncho = 1895;
+					$nuevoAlto = 496;
 
 					/*=============================================
 					DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP

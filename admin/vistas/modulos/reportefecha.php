@@ -79,8 +79,9 @@ for($Hr=1;$Hr<5;$Hr++){
   }
 }
 $arrHrMn[] = "05:00";
-$arrHrMn[] = "05:30";
+$arrHrMn[] = "07:00";
 
+$param = ControladorPublicacion::ctrMostrar("reporteparametros","idRepParam", 1);
 
 ?>
 
@@ -141,6 +142,43 @@ $arrHrMn[] = "05:30";
                   <!-- Main content -->
                 <section class="content">
                         <div class="container-fluid">
+
+                        <div class="row">
+                            <div class="col-md-2">
+
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="4" class="form-control Pyear" placeholder="2020" value="<?php echo $param[0]["year"]; ?>" required>
+                                    </div>
+                                  </div>
+
+                            </div>
+                            <div class="col-md-2">
+
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <input type="text" class="form-control FcolumInit" placeholder="E0000" value="<?php echo $param[0]["columInit"]; ?>" required>
+                                    </div>
+                                  </div>
+
+                              </div>
+                              <div class="col-md-2">
+
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                    <input type="text" class="form-control FcolumFin" placeholder="E0000" value="<?php echo $param[0]["columFin"]; ?>" required>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                              <div class="col-md-2">
+
+                                <a class="btn btn-sm btn-info float-right actParam">ACTUALIZAR</a>
+
+                              </div>
+                          </div>
+
                           <div class="row">
                             <div class="col-12">
 

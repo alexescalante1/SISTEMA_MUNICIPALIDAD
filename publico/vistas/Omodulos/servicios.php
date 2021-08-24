@@ -5,7 +5,7 @@
 
         <header class="section-header">
           <h2>Services</h2>
-          <p>Veritatis et dolores facere numquam et praesentium</p>
+          <p>Protegete y apoya a los demas</p>
         </header>
 
         <div class="row gy-4">
