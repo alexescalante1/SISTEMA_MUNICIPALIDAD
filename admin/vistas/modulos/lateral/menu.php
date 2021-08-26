@@ -24,15 +24,6 @@ MENU
     <li class="nav-header">TRAMITE DOCUMENTARIO</li>
     
     <li class="nav-item">
-      <a href="reportefecha" class="nav-link">
-        <i class="nav-icon fas fa-th"></i>
-        <p>
-          MESA VIRTUAL
-        </p>
-      </a>
-    </li>
-    
-    <li class="nav-item">
       <a href="#" class="nav-link">
         <i class="nav-icon fas fa-copy"></i>
         <p>
@@ -42,13 +33,13 @@ MENU
       </a>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="ingDocTupa" class="nav-link">
+          <a href="regConTupa" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>DOC CON TUPA</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="ingDocSTupa" class="nav-link">
+          <a href="regSinTupa" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>DOC SIN TUPA</p>
           </a>
@@ -67,19 +58,19 @@ MENU
       </a>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="ingDocTupa" class="nav-link">
+          <a href="bandejaPendientes" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>PENDIENTES</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="ingDocSTupa" class="nav-link">
+          <a href="bandejaDerivados" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>DERIVADOS</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="ingDocSTupa" class="nav-link">
+          <a href="bandejaFinalizados" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>FINALIZADOS</p>
           </a>
@@ -98,19 +89,28 @@ MENU
       </a>
       <ul class="nav nav-treeview">
         <li class="nav-item">
-          <a href="ingDocTupa" class="nav-link">
+          <a href="consultaDocGenerales" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>DOC GENERALES</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="ingDocSTupa" class="nav-link">
+          <a href="consultaDocConTupa" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
             <p>TRAMITES TUPA</p>
           </a>
         </li>
         
       </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="mesaVirtual" class="nav-link">
+        <i class="nav-icon fas fa-th"></i>
+        <p>
+          MESA VIRTUAL
+        </p>
+      </a>
     </li>
 
     <li class="nav-header">GESTOR DE VISTAS</li>

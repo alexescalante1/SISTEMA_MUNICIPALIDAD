@@ -160,3 +160,15 @@
 	border-radius: 5px;
 	cursor: pointer;
 }
+
+
+.def-input {
+	border: 2px solid #cecece;
+	transition: .3s ease all;
+}
+
+.def-input:focus {
+	border: 2px solid #0099ff;
+	outline: none;
+	box-shadow: 3px 0px 20px rgba(163,163,163, 0.4);
+}

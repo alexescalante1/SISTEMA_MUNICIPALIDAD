@@ -9,19 +9,6 @@ require_once "controladores/administradores.controlador.php";
 require_once "modelos/administradores.modelo.php";
 
 
-
-
-
-
-
-
-require_once "controladores/usuarios.controlador.php";
-require_once "modelos/usuarios.modelo.php";
-
-require_once "controladores/notificaciones.controladorM.php";
-require_once "modelos/notificaciones.modeloM.php";
-
-
 require_once "modelos/rutas.php";
 
 $plantilla = new ControladorPlantilla();

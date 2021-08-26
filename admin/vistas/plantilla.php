@@ -71,7 +71,7 @@ session_start();
     echo '<div class="wrapper">
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-      <h2 style="font-weight: bold;" class="animation__wobble">LOADING...</h2>
+      <img class="animation__wobble" src="vistas/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
     </div>
     ';
 
@@ -86,7 +86,14 @@ session_start();
         $item = "ruta";
 
         if($_GET["ruta"]== "inicio" ||
-           $_GET["ruta"]== "usuarios" ||
+           $_GET["ruta"]== "regConTupa" || 
+           $_GET["ruta"]== "regSinTupa" ||
+           $_GET["ruta"]== "bandejaPendientes" ||
+           $_GET["ruta"]== "bandejaDerivados" ||
+           $_GET["ruta"]== "bandejaFinalizados" ||
+           $_GET["ruta"]== "consultaDocGenerales" ||
+           $_GET["ruta"]== "consultaDocConTupa" ||
+           $_GET["ruta"]== "mesaVirtual" ||
            $_GET["ruta"]== "perfiles" ||
            $_GET["ruta"]== "publicacion" ||
            $_GET["ruta"]== "pvideos" ||
@@ -107,7 +114,6 @@ session_start();
      }
 
     include "modulos/footer.php";
-
     echo '</div>';
 
  }else{
@@ -116,16 +122,14 @@ session_start();
  
 ?>
 
-
         <!--=====================================
         JS PERSONALIZADO
         ======================================-->
         <script src="vistas/js/gestorAdministradores.js"></script>
         <script src="vistas/js/gestorPublicacion.js"></script>
         <script src="vistas/js/gestorUsuarios.js"></script>
-        <script src="vistas/js/gestorNotificaciones.js"></script>
+        <script src="vistas/js/gestorTramite.js"></script>
         <!-- ./wrapper -->
-
 
         <!-- REQUIRED SCRIPTS -->
       

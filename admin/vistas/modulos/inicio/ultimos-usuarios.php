@@ -1,18 +1,18 @@
  <?php
 
-$usuarios = ControladorUsuarios::ctrMostrarTotalUsuarios("fecha");
+$admins = ControladorAdministradores::ctrMostrarAdministradores(null,null);
 $url = Ruta::ctrRutaServidor();
 
 ?>
 
 <!--=====================================
-ÚLTIMOS USUARIOS
+ÚLTIMOS admins
 ======================================-->
 
 <!-- USERS LIST -->
 <div class="card">
 	<div class="card-header">
-	<h3 class="card-title">Ultimos Usuarios</h3>
+	<h3 class="card-title">Ultimos admins</h3>
 
 	<div class="card-tools">
 		<span class="badge badge-danger">8 New Members</span>
@@ -28,23 +28,21 @@ $url = Ruta::ctrRutaServidor();
 	<div class="card-body p-0">
 	<ul class="users-list clearfix">
 
-
-
 		<?php
 
-			if(count($usuarios) > 8){
-				$totalUsuarios = 8;
+			if(count($admins) > 8){
+				$totaladmins = 8;
 			}else{
-				$totalUsuarios = count($usuarios);
+				$totaladmins = count($admins);
 			}
 
-			for($i = 0; $i < $totalUsuarios; $i ++){
+			for($i = 0; $i < $totaladmins; $i ++){
 
-				if($usuarios[$i]["foto"] != ""){
+				if($admins[$i]["foto"] != ""){
 					echo '
 					<li>
-						<img src="'.$url.$usuarios[$i]["foto"].'" alt="User Image">
-						<a class="users-list-name" href="#">'.$usuarios[$i]["nombre"].'</a>
+						<img src="'.$url.$admins[$i]["foto"].'" alt="User Image">
+						<a class="users-list-name" href="#">'.$admins[$i]["nombre"].'</a>
 						<span class="users-list-date">Hoy</span>
 					</li>
 					';
@@ -52,8 +50,8 @@ $url = Ruta::ctrRutaServidor();
 				}else{
 					echo '
 					<li>
-						<img src="vistas/img/usuarios/default/anonymous.png" alt="User Image">
-						<a class="users-list-name" href="#">'.$usuarios[$i]["nombre"].'</a>
+						<img src="vistas/img/perfiles/default/anonymous.png" alt="User Image">
+						<a class="users-list-name" href="#">'.$admins[$i]["nombre"].'</a>
 						<span class="users-list-date">Hoy</span>
 					</li>
 					';
@@ -68,7 +66,7 @@ $url = Ruta::ctrRutaServidor();
 	</div>
 	<!-- /.card-body -->
 	<div class="card-footer text-center">
-	<a href="usuarios">View All Users</a>
+	<a href="perfiles">View All Users</a>
 	</div>
 	<!-- /.card-footer -->
 </div>

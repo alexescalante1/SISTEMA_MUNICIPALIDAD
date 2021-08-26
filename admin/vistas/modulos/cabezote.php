@@ -9,9 +9,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="inicio" class="nav-link">Inicio</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contacto</a>
-      </li>
     </ul>
 
     <!-- Right navbar links -->
@@ -19,7 +16,7 @@
 
       <?php
 
-        include "cabezote/buscador.php";
+        //include "cabezote/buscador.php";
 
       ?>
   
@@ -42,7 +39,7 @@
       
       <?php
 
-        include "cabezote/mensajes.php";
+        //include "cabezote/mensajes.php";
 
         include "cabezote/notificaciones.php";
 
