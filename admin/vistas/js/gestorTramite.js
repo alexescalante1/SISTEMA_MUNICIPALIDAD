@@ -1,5 +1,5 @@
 
-
+const formulario = document.getElementById('formulario');
 
 /*=============================================
 SUBIENDO LA FOTO PRINCIPAL
@@ -101,22 +101,12 @@ $(".guardarRemitente").click(function(){
 						  
 						$(".cerrarModal").click();
 
+						formulario.reset();
+
 						$("#formulario .Iremitente").val(Rndoc);
 						$("#formulario #IDREMITENTE").val(respuesta);
 						$("#formulario .remitenetName").val(Rnombre);
 
-						$("#modalAgregarRemitente .Rtipoper").val("");
-						$("#modalAgregarRemitente .Rtipodoc").val("");
-						$("#modalAgregarRemitente .Rndoc").val("");
-						$("#modalAgregarRemitente .Rnombre").val("");
-						$("#modalAgregarRemitente .Rdireccion").val("");
-						$("#modalAgregarRemitente .Remail").val("");
-						$("#modalAgregarRemitente .Rtelef").val("");
-						$("#modalAgregarRemitente .Rfax").val("");
-						$("#modalAgregarRemitente .Rdep").val("");
-						$("#modalAgregarRemitente .Rprov").val("");
-						$("#modalAgregarRemitente .Rdistr").val("");
-						$("#modalAgregarRemitente .Rrepresentante").val("");
 
 					}else{
 
@@ -245,6 +235,9 @@ $(".guardarDocumento").click(function(){
 							timer: 900
 						  }).then((r) => {
 
+
+								formulario.reset();
+
 								$(".AddArchivoR").click();
 								$("#CODDOCUMENTO").val(respuesta);
 
@@ -253,7 +246,7 @@ $(".guardarDocumento").click(function(){
 							  	//window.location = "regConTupa";
 							
 								
-
+/*
 								$("#formulario .Iremitente").val("");
 								$("#formulario #IDREMITENTE").val("");
 								$("#formulario .remitenetName").val("");
@@ -268,7 +261,7 @@ $(".guardarDocumento").click(function(){
 								$("#formulario .requicitosDoc").val("");
 								$("#formulario .tiempoResDoc").val("");
 								$("#formulario .foliosDoc").val("");
-
+*/
 								
 
 						  })

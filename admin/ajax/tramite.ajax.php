@@ -31,7 +31,7 @@ class AjaxTramite{
 
 		$respuesta = ControladorTramite::ctrCrearRemitente($datos);
 
-		echo $respuesta[0];
+		echo $respuesta;
 
 	}
 

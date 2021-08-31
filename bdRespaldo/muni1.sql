@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-08-2021 a las 08:37:32
+-- Tiempo de generación: 26-08-2021 a las 02:18:31
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.34
 
@@ -46,7 +46,7 @@ CREATE TABLE `administradores` (
 --
 
 INSERT INTO `administradores` (`id`, `dniAdmin`, `userAdmin`, `nombre`, `email`, `foto`, `password`, `perfil`, `estado`, `dark`, `fecha`) VALUES
-(5, '73104785', '', 'Alex Escalante ONE', 'admin@gmail.com', 'vistas/img/perfiles/138.jpg', '$2a$07$asxx54ahjppf45sd87a5aunxs9bkpyGmGE/.vekdjFg83yRec789S', 'administrador', 1, 1, '2021-08-31 06:35:39'),
+(5, '73104785', '', 'Alex Escalante ONE', 'admin@gmail.com', 'vistas/img/perfiles/138.jpg', '$2a$07$asxx54ahjppf45sd87a5aunxs9bkpyGmGE/.vekdjFg83yRec789S', 'administrador', 1, 1, '2021-08-25 07:35:00'),
 (162, '73104795', '', 'Alex Escalante TWO', 'alexescalante921@gmail.com', 'vistas/img/perfiles/844.png', '$2a$07$asxx54ahjppf45sd87a5aubFblDrx5VgsL7udWc9pTLp1r8BxczhK', 'administrador', 1, 1, '2021-07-24 07:39:09'),
 (165, '73545894', '', 'Fredy Marin Rojas', 'laboral@gmail.com', 'vistas/img/perfiles/972.jpg', '$2a$07$asxx54ahjppf45sd87a5auR6AmIR5N5CndGl8MnjTyLo5SYcp56Qe', 'laboratorista', 0, 1, '2021-07-21 05:44:10'),
 (166, '15489562', '', 'Ana Maria', 'ana@gmail.com', 'vistas/img/perfiles/600.jpg', '$2a$07$asxx54ahjppf45sd87a5auzGfz9GaOjSPJ5jEDpHii9vSQEEqY1Zm', 'administrador', 0, 1, '2021-07-21 05:44:11');
@@ -84,95 +84,10 @@ INSERT INTO `carrusel` (`idCarrusel`, `portada`, `titulo`, `ruta`, `prioridad`, 
 CREATE TABLE `derivaciones` (
   `idDerivacion` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `respuesta` text NOT NULL,
-  `idGerencia` int(11) NOT NULL,
+  `asunto` text NOT NULL,
+  `observaciones` text NOT NULL,
   `idDocumento` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `derivaciones`
---
-
-INSERT INTO `derivaciones` (`idDerivacion`, `fecha`, `respuesta`, `idGerencia`, `idDocumento`) VALUES
-(117, '2021-08-26 21:59:50', '', 5, 124),
-(118, '2021-08-26 22:00:58', '', 4, 125),
-(119, '2021-08-26 22:02:46', '', 4, 126),
-(121, '2021-08-26 22:29:58', '', 5, 128),
-(122, '2021-08-26 22:30:28', '', 10, 129),
-(123, '2021-08-26 22:41:23', '', 11, 130),
-(124, '2021-08-27 00:06:32', '', 10, 131),
-(125, '2021-08-27 00:28:47', '', 4, 132),
-(126, '2021-08-27 00:29:47', '', 4, 133),
-(127, '2021-08-28 01:10:03', '', 10, 134),
-(128, '2021-08-28 01:10:10', '', 10, 135),
-(129, '2021-08-28 01:10:13', '', 10, 136),
-(130, '2021-08-28 01:10:15', '', 10, 137),
-(131, '2021-08-28 01:10:18', '', 10, 138),
-(132, '2021-08-28 01:10:21', '', 10, 139),
-(133, '2021-08-28 01:10:23', '', 10, 140),
-(134, '2021-08-28 01:10:25', '', 10, 141),
-(135, '2021-08-28 01:10:28', '', 10, 142),
-(136, '2021-08-28 01:10:30', '', 10, 143),
-(137, '2021-08-28 01:10:52', '', 5, 144),
-(138, '2021-08-28 01:10:55', '', 5, 145),
-(139, '2021-08-28 01:10:57', '', 5, 146),
-(140, '2021-08-28 01:10:59', '', 5, 147),
-(141, '2021-08-28 01:11:01', '', 5, 148),
-(142, '2021-08-28 01:11:03', '', 5, 149),
-(143, '2021-08-28 01:11:06', '', 5, 150),
-(144, '2021-08-28 01:11:08', '', 5, 151),
-(145, '2021-08-28 01:11:10', '', 5, 152),
-(146, '2021-08-28 01:11:13', '', 5, 153),
-(147, '2021-08-28 01:11:15', '', 5, 154),
-(148, '2021-08-28 01:11:17', '', 5, 155),
-(149, '2021-08-28 01:11:20', '', 5, 156),
-(150, '2021-08-28 01:11:35', '', 5, 157),
-(151, '2021-08-28 01:11:37', '', 5, 158),
-(152, '2021-08-28 17:06:05', '', 5, 159),
-(153, '2021-08-30 15:28:21', '', 5, 160),
-(154, '2021-08-30 15:28:42', '', 4, 161),
-(155, '2021-08-30 15:28:53', '', 5, 162),
-(156, '2021-08-30 15:29:01', '', 4, 163),
-(157, '2021-08-30 15:29:22', '', 4, 164),
-(158, '2021-08-30 15:29:34', '', 4, 165),
-(159, '2021-08-30 15:29:44', '', 5, 166),
-(160, '2021-08-30 15:29:59', '', 4, 167),
-(161, '2021-08-30 15:30:10', '', 4, 168),
-(162, '2021-08-30 15:30:31', '', 4, 169),
-(163, '2021-08-30 15:30:41', '', 10, 170),
-(164, '2021-08-30 15:30:50', '', 4, 171),
-(165, '2021-08-30 15:30:58', '', 5, 172),
-(166, '2021-08-30 15:31:10', '', 5, 173),
-(167, '2021-08-30 15:31:29', '', 5, 174),
-(168, '2021-08-30 15:31:38', '', 5, 175),
-(169, '2021-08-30 15:31:47', '', 5, 176),
-(170, '2021-08-30 15:31:57', '', 4, 177),
-(171, '2021-08-30 15:34:59', '', 5, 178),
-(172, '2021-08-30 15:35:10', '', 4, 179),
-(173, '2021-08-30 15:35:19', '', 11, 180),
-(174, '2021-08-30 15:35:27', '', 4, 181),
-(175, '2021-08-30 15:35:58', '', 4, 182),
-(176, '2021-08-30 15:36:05', '', 4, 183),
-(177, '2021-08-30 15:36:18', '', 5, 184),
-(178, '2021-08-30 15:36:28', '', 4, 185),
-(179, '2021-08-30 15:36:38', '', 5, 186),
-(180, '2021-08-30 15:36:48', '', 5, 187),
-(181, '2021-08-30 15:37:02', '', 5, 188),
-(182, '2021-08-30 15:37:12', '', 4, 189),
-(183, '2021-08-30 18:28:19', '', 5, 200),
-(184, '2021-08-30 18:29:53', '', 5, 201),
-(185, '2021-08-30 18:30:53', '', 5, 202),
-(186, '2021-08-30 18:32:39', '', 4, 203),
-(187, '2021-08-31 00:21:16', '', 5, 204),
-(188, '2021-08-31 02:52:21', '', 11, 205),
-(189, '2021-08-31 03:11:42', '', 5, 206),
-(190, '2021-08-31 04:04:19', '', 10, 207),
-(191, '2021-08-31 04:29:38', '', 5, 208),
-(192, '2021-08-31 04:31:02', '', 5, 209),
-(193, '2021-08-31 06:04:31', '', 5, 210),
-(194, '2021-08-31 06:21:28', '', 10, 211),
-(195, '2021-08-31 06:23:55', '', 10, 212),
-(196, '2021-08-31 06:24:25', '', 4, 213);
 
 -- --------------------------------------------------------
 
@@ -182,9 +97,7 @@ INSERT INTO `derivaciones` (`idDerivacion`, `fecha`, `respuesta`, `idGerencia`, 
 
 CREATE TABLE `documentos` (
   `idDocumentos` int(11) NOT NULL,
-  `codigo` text NOT NULL DEFAULT '000000000000',
-  `modo` text NOT NULL,
-  `tipodoc` text NOT NULL,
+  `tipoducumento` text NOT NULL,
   `numdoc` text NOT NULL,
   `idRemitente` int(11) NOT NULL,
   `asunto` text NOT NULL,
@@ -193,6 +106,7 @@ CREATE TABLE `documentos` (
   `procedimiento` text NOT NULL,
   `requicitos` text NOT NULL,
   `referencia` text NOT NULL,
+  `idGerencia` int(11) NOT NULL,
   `idAdmin` int(11) NOT NULL,
   `folios` int(11) NOT NULL,
   `archivo` text NOT NULL,
@@ -200,101 +114,6 @@ CREATE TABLE `documentos` (
   `estado` text NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `documentos`
---
-
-INSERT INTO `documentos` (`idDocumentos`, `codigo`, `modo`, `tipodoc`, `numdoc`, `idRemitente`, `asunto`, `obserbaciones`, `clase`, `procedimiento`, `requicitos`, `referencia`, `idAdmin`, `folios`, `archivo`, `tiempoRespuesta`, `estado`, `fecha`) VALUES
-(124, '202100000124', 'SIN TUPA', 'SOLICITUD', 'S/N', 19, 'PRACTICAS PRE PROFE', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000124.pdf', 5, '1', '2021-08-26 21:59:55'),
-(125, '202100000125', 'SIN TUPA', 'SOLICITUD', 'S/N', 19, 'PRACTICAS PROFESIONALES', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000125.pdf', 5, '0', '2021-08-26 22:39:05'),
-(126, '202100000126', 'SIN TUPA', 'SOLICITUD', 'S/N', 19, 'CERTIFICADO DE PRACTICAS', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000126.pdf', 5, '1', '2021-08-26 22:02:53'),
-(128, '202100000128', 'SIN TUPA', 'CARTA', 'N 5481 2021', 19, 'RIEGO DE CALLES', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000128.pdf', 5, '1', '2021-08-27 00:32:27'),
-(129, '202100000129', 'SIN TUPA', 'AYUDA MEMORIAL', 'S/N', 31, 'REGULARIZACION DE FALTAS', '', '', '', '', '', 5, 0, 'vistas/img/archivos/202100000129.pdf', 0, '1', '2021-08-27 00:31:46'),
-(130, '202100000130', 'SIN TUPA', 'AYUDA MEMORIAL', 'S/N', 19, 'PAGO PREDIAL', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000130.pdf', 5, '1', '2021-08-27 00:30:42'),
-(131, '202100000131', 'SIN TUPA', 'SOLICITUD', 'S/N', 32, 'LIMPIEZA DE VIAS PUBLICAS ', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000131.pdf', 5, '1', '2021-08-27 00:06:39'),
-(132, '202100000132', 'SIN TUPA', 'SOLICITUD', 'S/N', 19, 'PRACTICAS PRE PROFESIONALES', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000132.pdf', 5, '1', '2021-08-27 00:29:02'),
-(133, '202100000133', 'SIN TUPA', 'SOLICITUD', 'S/N', 19, 'PRACTICA PRE PROFESIONALES', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000133.pdf', 5, '1', '2021-08-27 00:30:01'),
-(134, '202100000134', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:03'),
-(135, '202100000135', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:10'),
-(136, '202100000136', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:13'),
-(137, '202100000137', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:15'),
-(138, '202100000138', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:18'),
-(139, '202100000139', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:21'),
-(140, '202100000140', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:23'),
-(141, '202100000141', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:25'),
-(142, '202100000142', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:28'),
-(143, '202100000143', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:30'),
-(144, '202100000144', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:52'),
-(145, '202100000145', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:55'),
-(146, '202100000146', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:57'),
-(147, '202100000147', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:59'),
-(148, '202100000148', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:01'),
-(149, '202100000149', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:03'),
-(150, '202100000150', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:06'),
-(151, '202100000151', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:08'),
-(152, '202100000152', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:10'),
-(153, '202100000153', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:13'),
-(154, '202100000154', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:15'),
-(155, '202100000155', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:17'),
-(156, '202100000156', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:20'),
-(157, '202100000157', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:35'),
-(158, '202100000158', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:37'),
-(159, '202100000159', 'SIN TUPA', 'CARTA', '452', 19, 'ODF', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000159.pdf', 5, '1', '2021-08-28 17:06:18'),
-(160, '202100000160', 'SIN TUPA', 'SOLICITUD', '11', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 15:28:21'),
-(161, '202100000161', 'SIN TUPA', 'INFORME', 'S/N', 31, 'A', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:28:42'),
-(162, '202100000162', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, '1', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:28:53'),
-(163, '202100000163', 'SIN TUPA', 'INFORME', 'S/N', 31, '1', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:29:01'),
-(164, '202100000164', 'SIN TUPA', 'INFORME', 'D', 31, 'WDD', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 15:29:22'),
-(165, '202100000165', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, '1ASD', '', '', '', '', '1111', 5, 0, '', 0, '1', '2021-08-30 15:29:34'),
-(166, '202100000166', 'SIN TUPA', 'CARTA', 'S/N', 31, '1', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:29:44'),
-(167, '202100000167', 'SIN TUPA', 'INFORME', 'S/N', 31, '1', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:29:59'),
-(168, '202100000168', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, 'QQ', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 15:30:10'),
-(169, '202100000169', 'SIN TUPA', 'SOLICITUD', '111111s', 31, '11111', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-31 03:47:25'),
-(170, '202100000170', 'SIN TUPA', 'AYUDA MEMORIAL', '111', 31, '1111111', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-31 03:46:47'),
-(171, '202100000171', 'SIN TUPA', 'CARTA', '11', 31, '11111111', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:30:50'),
-(172, '202100000172', 'SIN TUPA', 'INFORME', 'S/N', 31, '1Q', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:30:58'),
-(173, '202100000173', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, '111', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:31:10'),
-(174, '202100000174', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 15:31:29'),
-(175, '202100000175', 'SIN TUPA', 'INFORME', '1', 31, '1111111', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:31:38'),
-(176, '202100000176', 'SIN TUPA', 'AYUDA MEMORIAL', 'S/N', 31, '1', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:31:47'),
-(177, '202100000177', 'SIN TUPA', 'SOLICITUD', '1', 31, '1', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:31:57'),
-(178, '202100000178', 'SIN TUPA', 'INFORME', 'S/N', 31, 'ASD', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 15:34:59'),
-(179, '202100000179', 'SIN TUPA', 'SOLICITUD', 'A', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 15:35:10'),
-(180, '202100000180', 'SIN TUPA', 'INFORME', 'ASD', 31, 'ASD', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:35:19'),
-(181, '202100000181', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, 'ASD', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:35:27'),
-(182, '202100000182', 'SIN TUPA', 'INFORME', 'S/N', 31, '111', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 15:35:58'),
-(183, '202100000183', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, '1', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:36:05'),
-(184, '202100000184', 'SIN TUPA', 'CARTA', '1', 31, '1111111', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:36:18'),
-(185, '202100000185', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, '1sd', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-31 03:46:58'),
-(186, '202100000186', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, '11', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:36:38'),
-(187, '202100000187', 'SIN TUPA', 'INFORME', 'S/N', 31, '1', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:36:48'),
-(188, '202100000188', 'SIN TUPA', 'INFORME', 'S/N', 31, '1111111', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:37:02'),
-(189, '202100000189', 'SIN TUPA', 'CARTA', 'S/N', 31, '11', '', '', '', '', '', 5, 0, '', 0, '1', '2021-08-30 15:37:12'),
-(190, '202100000149', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:11:03'),
-(191, '202100000139', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:21'),
-(192, '202100000140', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:23'),
-(193, '202100000141', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:25'),
-(194, '202100000142', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:28'),
-(195, '202100000143', 'SIN TUPA', 'DIRECTIVA', 'S/N', 31, 'AWD', '', 'SERVICIOS', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:30'),
-(196, '202100000144', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:52'),
-(197, '202100000145', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:55'),
-(198, '202100000146', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:57'),
-(199, '202100000147', 'SIN TUPA', 'CARTA', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-28 01:10:59'),
-(200, '202100000200', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, 'A', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 18:28:19'),
-(201, '202100000201', 'SIN TUPA', 'INFORME', 'S/N', 31, '111', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000201.pdf', 5, '1', '2021-08-30 18:30:01'),
-(202, '202100000202', 'SIN TUPA', 'INFORME', 'S/N', 31, 'AS', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 18:30:53'),
-(203, '202100000203', 'SIN TUPA', 'CARTA', 'S/N', 31, 'ASD', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-30 18:32:39'),
-(204, '202100000204', 'SIN TUPA', 'SOLICITUD', 'S/N', 19, 'HOLA MUNDO XTREME', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000204.pdf', 5, '1', '2021-08-31 00:21:20'),
-(205, '202100000205', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, 'SAD', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-31 02:52:21'),
-(206, '202100000206', 'SIN TUPA', 'INFORME', 'S/N', 31, 'ASD', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-31 03:11:42'),
-(207, '202100000207', 'SIN TUPA', 'SOLICITUD', 'S/N', 31, 'ASD', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000207.pdf', 5, '1', '2021-08-31 04:04:37'),
-(208, '202100000208', 'SIN TUPA', 'SOLICITUD', 'S/N', 19, 'HOLA', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000208.pdf', 5, '1', '2021-08-31 04:29:44'),
-(209, '202100000209', 'SIN TUPA', 'CARTA', 'S/N', 19, 'WISKAS', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000209.pdf', 5, '1', '2021-08-31 04:31:12'),
-(210, '202100000210', 'SIN TUPA', 'SOLICITUD', 'S/N', 39, 'EE', '', '', '', '', '', 5, 1, 'vistas/img/archivos/202100000210.pdf', 5, '1', '2021-08-31 06:04:37'),
-(211, '202100000211', 'SIN TUPA', 'INFORME', 'S/N', 42, 'TTT', '', '', '', '', '', 5, 1, '', 5, '1', '2021-08-31 06:21:28'),
-(212, '202100000212', 'SIN TUPA', 'SOLICITUD', '546546456', 43, 'SDSDFSDFSDFSDF', '', '', '', '', '', 5, 2342354, 'vistas/img/archivos/202100000212.pdf', 324, '1', '2021-08-31 06:24:03'),
-(213, '202100000213', 'SIN TUPA', 'INFORME', '5555555555555555555', 19, '555555555555555555', '', 'PROCESOS', '', '', '5555555555555', 5, 5555555, '', 555, '1', '2021-08-31 06:24:25');
 
 -- --------------------------------------------------------
 
@@ -322,8 +141,6 @@ CREATE TABLE `docvirtuales` (
   `folios` int(11) NOT NULL,
   `archivo` text NOT NULL,
   `visto` tinyint(1) NOT NULL,
-  `respuesta` text NOT NULL,
-  `estado` int(11) NOT NULL,
   `fecha` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -470,22 +287,10 @@ CREATE TABLE `remitente` (
 
 INSERT INTO `remitente` (`idRemitente`, `tipopersona`, `tipoDoc`, `numDoc`, `nombre`, `direccion`, `email`, `telefono`, `fax`, `departamento`, `provincia`, `distrito`, `representante`, `estado`, `fecha`) VALUES
 (19, 'NATURAL', 'DNI', '73104785', 'ALEX FREDY ESCALANTE MARON', 'AV. ORGULLO AYMARA JAYLLIHUAYA', 'alex@gmail.com', '95178855', '12345678', 'PUNO', 'PUNO', 'PUNO', 'LOURDES MARON MAMANI', '1', '2021-08-25 06:57:01'),
+(20, 'NATURAL', 'DNI', '73104895', 'JOSE MANUEL MAMANI MAMANI', '', '', '', '', '', '', '', '', '1', '2021-08-25 07:21:34'),
 (21, 'NATURAL', 'DNI', '73104786', 'MIRIAN ROXANA ESCALANTE MARON', '', '', '', '', '', '', '', '', '1', '2021-08-25 07:32:08'),
-(23, 'NATURAL', 'DNI', '73104787', 'RICARDO GONZALES ORDOÑES', '', '', '', '', '', '', '', '', '1', '2021-08-25 23:55:34'),
-(26, 'NATURAL', 'DNI', '73104788', 'ANTONIO MANUEL JERARDO TUPA', 'AV LOS MORADOS', 'ant@gmail.com', '78845874', '54545454', 'PUNO', 'PUNO', 'JULIACA', 'NULL', '1', '2021-08-26 02:06:21'),
-(31, 'JURIDICA', 'RUC', '11111111111', 'YUMAKER SAC', '', '', '', '', '', '', '', '', '1', '2021-08-26 22:26:22'),
-(32, 'NATURAL', 'DNI', '73104789', 'CARLOS MARIATEGUI DEZA', '', '', '', '', '', '', '', '', '1', '2021-08-27 00:06:03'),
-(33, 'JURIDICA', 'RUC', '11112222333', 'DDDD', '', '', '', '', '', '', '', '', '1', '2021-08-31 05:51:11'),
-(34, 'JURIDICA', 'RUC', '22222222222', 'SD', '', '', '', '', '', '', '', '', '1', '2021-08-31 05:53:51'),
-(35, 'JURIDICA', 'RUC', '99999999999', 'YUYT', '', '', '', '', '', '', '', '', '1', '2021-08-31 05:59:03'),
-(36, 'JURIDICA', 'RUC', '44444444444', 'JUANITA', '', '', '', '', '', '', '', '', '1', '2021-08-31 05:59:42'),
-(37, 'JURIDICA', 'RUC', '56666666666', 'JUANCITOSSS', '', '', '', '', '', '', '', '', '1', '2021-08-31 06:00:15'),
-(38, 'JURIDICA', 'RUC', '88888888888', 'JACINTA', '', '', '', '', '', '', '', '', '1', '2021-08-31 06:01:24'),
-(39, 'NATURAL', 'DNI', '33333333333', 'MIGUE DAMAZCO', '', '', '', '', '', '', '', '', '1', '2021-08-31 06:03:59'),
-(40, 'JURIDICA', 'RUC', '34233423777', 'GGGGGGGGGG', '', '', '', '', '', '', '', '', '1', '2021-08-31 06:19:34'),
-(41, 'NATURAL', 'DNI', '11111111223', 'YYUUIIOOPPP', '', '', '', '', '', '', '', '', '1', '2021-08-31 06:20:47'),
-(42, 'JURIDICA', 'RUC', '34534534534', 'ASDASDASDASDASD', '', '', '', '', '', '', '', '', '1', '2021-08-31 06:21:13'),
-(43, 'JURIDICA', 'RUC', '77777777766', 'VVTT', '', '', '', '', '', '', '', '', '1', '2021-08-31 06:23:32');
+(22, 'JURIDICA', 'RUC', '15487922644', 'YUMAKER SAC', '', '', '', '', '', '', '', '', '1', '2021-08-25 07:32:58'),
+(23, 'NATURAL', 'DNI', '73104787', 'RICARDO GONZALES ORDOÑES', '', '', '', '', '', '', '', '', '1', '2021-08-25 23:55:34');
 
 -- --------------------------------------------------------
 
@@ -549,14 +354,14 @@ ALTER TABLE `carrusel`
 --
 ALTER TABLE `derivaciones`
   ADD PRIMARY KEY (`idDerivacion`),
-  ADD KEY `docderivac` (`idDocumento`),
-  ADD KEY `genciaderiva` (`idGerencia`);
+  ADD KEY `docderivac` (`idDocumento`);
 
 --
 -- Indices de la tabla `documentos`
 --
 ALTER TABLE `documentos`
   ADD PRIMARY KEY (`idDocumentos`),
+  ADD KEY `docgerencia` (`idGerencia`),
   ADD KEY `docadmin` (`idAdmin`),
   ADD KEY `remdoc` (`idRemitente`);
 
@@ -629,13 +434,13 @@ ALTER TABLE `carrusel`
 -- AUTO_INCREMENT de la tabla `derivaciones`
 --
 ALTER TABLE `derivaciones`
-  MODIFY `idDerivacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=197;
+  MODIFY `idDerivacion` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `documentos`
 --
 ALTER TABLE `documentos`
-  MODIFY `idDocumentos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
+  MODIFY `idDocumentos` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `docvirtuales`
@@ -671,7 +476,7 @@ ALTER TABLE `pvideos`
 -- AUTO_INCREMENT de la tabla `remitente`
 --
 ALTER TABLE `remitente`
-  MODIFY `idRemitente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `idRemitente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `reporteferiados`
@@ -693,14 +498,14 @@ ALTER TABLE `reporteparametros`
 -- Filtros para la tabla `derivaciones`
 --
 ALTER TABLE `derivaciones`
-  ADD CONSTRAINT `docderivac` FOREIGN KEY (`idDocumento`) REFERENCES `documentos` (`idDocumentos`) ON DELETE CASCADE,
-  ADD CONSTRAINT `genciaderiva` FOREIGN KEY (`idGerencia`) REFERENCES `gerencias` (`idGerencias`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `docderivac` FOREIGN KEY (`idDocumento`) REFERENCES `documentos` (`idDocumentos`) ON DELETE CASCADE;
 
 --
 -- Filtros para la tabla `documentos`
 --
 ALTER TABLE `documentos`
   ADD CONSTRAINT `docadmin` FOREIGN KEY (`idAdmin`) REFERENCES `administradores` (`id`),
+  ADD CONSTRAINT `docgerencia` FOREIGN KEY (`idGerencia`) REFERENCES `gerencias` (`idGerencias`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `remdoc` FOREIGN KEY (`idRemitente`) REFERENCES `remitente` (`idRemitente`);
 
 --

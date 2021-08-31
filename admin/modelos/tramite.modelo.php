@@ -119,7 +119,9 @@ class ModeloTramite{
 
 	static public function mdlIngresarRemitente($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(tipopersona, tipoDoc, numDoc, nombre, direccion, email, telefono, fax, departamento, provincia, distrito, representante, estado) VALUES (:tipopersona, :tipoDoc, :numDoc, :nombre, :direccion, :email, :telefono, :fax, :departamento, :provincia, :distrito, :representante, :estado)");
+		$conec = (new Conexion())->conectar();
+		
+		$stmt = $conec->prepare("INSERT INTO $tabla(tipopersona, tipoDoc, numDoc, nombre, direccion, email, telefono, fax, departamento, provincia, distrito, representante, estado) VALUES (:tipopersona, :tipoDoc, :numDoc, :nombre, :direccion, :email, :telefono, :fax, :departamento, :provincia, :distrito, :representante, :estado)");
 
 		$stmt->bindParam(":tipopersona", $datos["tipopersona"], PDO::PARAM_STR);
 		$stmt->bindParam(":tipoDoc", $datos["tipoDoc"], PDO::PARAM_STR);
@@ -137,6 +139,9 @@ class ModeloTramite{
 
 		if($stmt->execute()){
 
+			return $conec->lastInsertId();
+
+			/*
 			$stmt2 = Conexion::conectar()->prepare("SELECT MAX(idRemitente) AS id FROM remitente");
 			
 			$stmt2 -> execute();
@@ -145,7 +150,7 @@ class ModeloTramite{
 	
 			$stmt2 -> close();
 	
-			$stmt2 = null;
+			$stmt2 = null;*/
 
 		}else{
 
