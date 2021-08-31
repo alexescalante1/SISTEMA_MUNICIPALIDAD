@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">BANDEJA DE FINALIZADOS</h1>
+          <h1 class="m-0">BANDEJA CARGA POR AJAX</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -29,8 +29,6 @@
         <!-- Left col -->
         <div class="col-lg-12">
           
-
-
           <!-- TABLE: LATEST ORDERS -->
           <div class="card">
 
@@ -52,7 +50,23 @@
 
                 <section class="content">
                   <div class="container-fluid">
-                    HOLA
+                    <div class="row">
+                        <div class="col-12">
+
+                          <div class="card">
+                              
+                            <div class="card-body">
+                              
+                                <div id="viewTabla">
+                                </div>
+
+                            </div>
+                              <!-- /.card-body -->
+                          </div>
+                            <!-- /.card -->
+                        </div>
+                            <!-- /.col -->
+                    </div>
                   </div>
                 </section>
 
@@ -60,7 +74,7 @@
             <!-- /.card-body -->
             <div class="card-footer clearfix">
 
-              <a class="btn btn-sm btn-info float-right" data-toggle="modal" data-target="#modalAgregarCimagen">AGREGAR NUEVA IMAGEN</a>
+              <!--<a class="btn btn-sm btn-info float-right" data-toggle="modal" data-target="#modalAgregarCimagen">AGREGAR NUEVA IMAGEN</a>-->
               
             </div>
             <!-- /.card-footer -->
@@ -75,33 +89,21 @@
       <!-- /.row -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
     </div><!--/. container-fluid -->
   </section>
   <!-- /.content -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 <!-- /.content-wrapper -->
@@ -112,14 +114,11 @@
 
 
 
-
-
-
-<div class="modal fade" id="modalAgregarCimagen">
+<div class="modal fade" id="modalVerDoc">
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">AGREGAR NUEVA IMAGEN</h4>
+        <h4 class="modal-title">DATOS DEL TRAMITE</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -127,48 +126,183 @@
       <div class="modal-body">
           
 
-          
-          <div class="row">
-              <div class="col-md-10">
+        <form id="formulario">
 
-                    <div class="form-group">
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fas fa-bolt" style="width:20px"></i></span>
-                        </div>
-                        <input type="text" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" class="form-control tituloCimagen" placeholder="TITULO">
-                        <input type="hidden" class="form-control rutaCimagen" readonly>
+          <div class="row">
+
+              <div class="col-md-6">
+
+
+                  <div class="form-group">
+                      <label>RESPONSABLE</label>
+                      <input type="text" class="form-control def-input" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" <?php echo 'value="'.$_SESSION["nombre"].'"'; ?> readonly>
+                      <input style="display:none" id="IDADMIN" <?php echo 'value="'.$_SESSION["id"].'"'; ?> >
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <label>* TIPO DE DOCUMENTO</label>
+                          <select class="form-control def-input tipoDoc">
+                              <option value="">SELECCIONAR</option>
+                              <option value="SOLICITUD">SOLICITUD</option>
+                              <option value="INFORME">INFORME</option>
+                              <option value="CARTA">CARTA</option>
+                              <option value="AYUDA MEMORIAL">AYUDA MEMORIAL</option>
+                              <option value="DIRECTIVA">DIRECTIVA</option>
+                              <option value="EXPOSICION DE MOTIVOS">EXPOSICION DE MOTIVOS</option>
+                              <option value="MEMORANDO">MEMORANDO</option>
+                              <option value="MEMORANDO MULTIPLE">MEMORANDO MULTIPLE</option>
+                              <option value="OFICIO">OFICIO</option>
+                              <option value="OFICIO CIRCULAR">OFICIO CIRCULAR</option>
+                              <option value="OFICIO MULTIPLE">OFICIO MULTIPLE</option>
+                              <option value="RESOLUCION">RESOLUCION</option>
+
+                          </select>
                       </div>
                     </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <label>TRAMITE</label>
+                          <input type="text" class="form-control def-input numDoc" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="S/N">
+                      </div>
+                    </div>
+
+                  </div>
+
 
               </div>
-              <div class="col-md-2">
 
-                    <div class="form-group">
-                      <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fas fa-bolt" style="width:20px"></i></span>
-                        </div>
-                        <input type="number" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" class="form-control Cprioridad" placeholder="PRIORIDAD" required>
+              <div class="col-md-6">
+                  
+                  <div class="form-group">
+                      <label>* MODO</label>
+                      <select class="form-control def-input modoDoc">
+                          <option value="SIN TUPA">SIN TUPA</option>
+                          <option value="CON TUPA">CON TUPA</option>
+                      </select>
+
+                  </div>
+
+                  <div class="row">
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <label>* REMITENTE / INSTITUCION</label>
+                          <input type="number" class="form-control def-input Iremitente" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="11" placeholder="INGRESAR EL DNI">
+                          <input style="display:none" id="IDREMITENTE">
+                          
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <label>NOMBRE</label>
+                          <input type="text" class="form-control def-input remitenetName" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="NO SELECCIONADO" readonly>
                       </div>
                     </div>
 
-                </div>
+                  </div>
+
+
+
+              </div>
+
           </div>
 
-          <div class="form-group">
-            <div class="input-group mb-3">
-              
-              <input type="file" id="filePR" class="SelIM fotoPrincipalA" accept="image/*">
-              
-              <label for="filePR" class="fileButton">
-                <i class="fas fa-file-image"></i> &nbsp; SUBIR FOTO PRINCIPAL 16:9 (10MB)
-              </label>
+          <div class="row">
 
-              <img src="vistas/img/publicacion/default/default.png" class="previsualizarPrincipalA" width="100%" style="border-radius:5px;border: 2px solid rgba(0, 0, 0, 0.3);">
+            <div class="col-md-6">
+
+
+                <div class="form-group">
+                  
+                    <label>* ASUNTO</label>
+                    <textarea type="text" maxlength="8000" rows="5" class="form-control def-input asuntoDoc" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="DESCRIPCION"></textarea>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <?php 
+                        $gerencias = ControladorPublicacion::ctrMostrar("gerencias",null, null);
+                      ?>
+                      <label>* OFICINA</label>
+                        <select class="form-control def-input oficinaDoc">
+                            <option value="">SELECCIONAR</option>
+                            <?php 
+                                foreach($gerencias as $key => $value){
+                                  echo '<option value="'.$value["idGerencias"].'">'.$value["titulo"].'</option>';
+                                }
+                            ?>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>REFERENCIA</label>
+                        <input type="number" class="form-control def-input referenciaDoc" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="15" placeholder="NUMERO DOC">
+                    </div>
+                  </div>
+
+
+                </div>
+                
+                
+                <div class="form-group">
+                    <label>CLASE</label>
+                    <select class="form-control def-input claseDoc">
+                        <option value="">SELECCIONAR</option>
+                        <option value="PROCESOS">PROCESOS</option>
+                        <option value="SERVICIOS">SERVICIOS</option>
+                    </select>
+
+                </div>
+
+                
+
+                
 
             </div>
+
+            <div class="col-md-6">
+                
+                <div class="form-group">
+                  
+                  <label>OBSERVACIONES</label>
+                  <textarea type="text" maxlength="8000" rows="5" class="form-control def-input observacionesDoc" placeholder="DESCRIPCION"></textarea>
+
+                </div>
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>TIEMPO DE RESPUESTA</label>
+                        <input type="number" class="form-control def-input tiempoResDoc" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="3" placeholder="DIAS" value="5">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label>FOLIOS</label>
+                        <input type="number" class="form-control def-input foliosDoc" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="7" value="1">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="form-group">
+                    <label>REQUICITOS</label>
+                    <input type="text" class="form-control def-input requicitosDoc" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();" placeholder="NULL" readonly>
+                    
+                </div>
+
+            </div>
+
           </div>
+
+          </form>
           
 
         
@@ -185,3 +319,6 @@
 </div>
 <!-- /.modal -->
 
+
+
+<script src="vistas/js/tables/tableFinalizados.js"></script>

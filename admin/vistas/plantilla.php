@@ -13,16 +13,25 @@ session_start();
   <link rel="icon" href="vistas/img/plantilla/icono.png">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
+  <script>
+
+    const URLADMIN = "http://localhost/SISTEMA_MUNICIPALIDAD/admin/";
+
+  </script>
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  
+  <!-- Select2 -->
+  <link rel="stylesheet" href="vistas/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="vistas/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="vistas/plugins/fontawesome-free/css/all.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="vistas/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="vistas/dist/css/adminlte.min.css">
-
-
 
   <!-- DataTables -->
   <link rel="stylesheet" href="vistas/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
@@ -59,11 +68,13 @@ session_start();
   <script src="vistas/plugins/toastr/toastr.min.js"></script>
   <!-- dropzonejs -->
   <script src="vistas/plugins/dropzone/dropzone.js"></script>
-    
+  <!-- barcode -->
+  <script src="vistas/js/JsBarcode.all.min.js"></script>
+
 </head>
 
 <body class="hold-transition <?php if(isset($_SESSION["estiloPantalla"]) && $_SESSION["estiloPantalla"] == 1){ echo 'dark-mode'; } ?>  sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-
+                                                                                                                         <!--dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-collapse-->
 <?php
 
  if(isset($_SESSION["validarSesionBackend"]) && $_SESSION["validarSesionBackend"] === "ok"){
@@ -168,16 +179,21 @@ session_start();
         <script src="vistas/plugins/datatables-buttons/js/buttons.print.min.js"></script>
         <script src="vistas/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 
-       
+        
+
         <!-- InputMask -->
         <script src="vistas/plugins/moment/moment.min.js"></script>
         <!-- Tempusdominus Bootstrap 4 -->
         <script src="vistas/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 
+        <!-- Select2 -->
+        <script src="vistas/plugins/select2/js/select2.full.min.js"></script>
         
         <script src="vistas/js/complementos.js"></script>
         <!-- BS-Stepper -->
         <script src="vistas/plugins/bs-stepper/js/bs-stepper.min.js"></script>
+        
+        
 
 </body>
 </html>

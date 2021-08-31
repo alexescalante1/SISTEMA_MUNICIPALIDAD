@@ -9,7 +9,15 @@
 
 (function ($) {
   'use strict'
-
+  /**
+     * Preloader
+     */
+   let preloader = select('#preloader');
+   if (preloader) {
+     window.addEventListener('load', () => {
+     preloader.remove()
+     });
+   }
   function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
   }

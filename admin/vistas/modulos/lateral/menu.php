@@ -27,7 +27,7 @@ MENU
       <a href="#" class="nav-link">
         <i class="nav-icon fas fa-copy"></i>
         <p>
-          REGISTRO
+          REGISTRAR
           <i class="fas fa-angle-left right"></i>
         </p>
       </a>
@@ -35,13 +35,13 @@ MENU
         <li class="nav-item">
           <a href="regConTupa" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>DOC CON TUPA</p>
+            <p>LOCALES</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="regSinTupa" class="nav-link">
+          <a href="mesaVirtual" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>DOC SIN TUPA</p>
+            <p>VITUALES</p>
           </a>
         </li>
         
@@ -60,19 +60,13 @@ MENU
         <li class="nav-item">
           <a href="bandejaPendientes" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>PENDIENTES</p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="bandejaDerivados" class="nav-link">
-            <i class="far fa-circle nav-icon"></i>
-            <p>DERIVADOS</p>
+            <p>PENDIENTES PHP</p>
           </a>
         </li>
         <li class="nav-item">
           <a href="bandejaFinalizados" class="nav-link">
             <i class="far fa-circle nav-icon"></i>
-            <p>FINALIZADOS</p>
+            <p>PENDIENTES JS AJAX</p>
           </a>
         </li>
         
@@ -102,15 +96,6 @@ MENU
         </li>
         
       </ul>
-    </li>
-
-    <li class="nav-item">
-      <a href="mesaVirtual" class="nav-link">
-        <i class="nav-icon fas fa-th"></i>
-        <p>
-          MESA VIRTUAL
-        </p>
-      </a>
     </li>
 
     <li class="nav-header">GESTOR DE VISTAS</li>
@@ -145,6 +130,7 @@ MENU
             </a>
           </li>
         ';
+
       }
 
     ?>
@@ -156,31 +142,7 @@ MENU
         </p>
       </a>
     </li>
-    <li class="nav-header">GENERADOR DE REPORTE</li>
-    <li class="nav-item">
-      <a href="reporte" class="nav-link">
-        <i class="nav-icon fas fa-th"></i>
-        <p>
-          Por Dias
-        </p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="reportefecha" class="nav-link">
-        <i class="nav-icon fas fa-th"></i>
-        <p>
-          Por Fecha y Hora
-        </p>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a href="reporteoficina" class="nav-link">
-        <i class="nav-icon fas fa-th"></i>
-        <p>
-          Por Gerencias
-        </p>
-      </a>
-    </li>
+
     <li class="nav-header">GESTOR DE CUENTAS</li>
     <?php
 

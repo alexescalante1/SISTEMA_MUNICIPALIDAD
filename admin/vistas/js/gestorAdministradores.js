@@ -1,6 +1,7 @@
 /*=============================================
 ACTIVAR PERFIL
 =============================================*/
+
 $("#tablaAdmin").on("click", ".btnActivar", function(){
 
 	var idPerfil = $(this).attr("idPerfil");

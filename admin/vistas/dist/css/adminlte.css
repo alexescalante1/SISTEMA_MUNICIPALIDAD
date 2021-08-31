@@ -11099,33 +11099,33 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .dark-mode :root {
-  --lightblue: #86bad8;
-  --navy: #002c59;
-  --olive: #74c8a3;
-  --lime: #67ffa9;
-  --fuchsia: #f672d8;
-  --maroon: #ed6c9b;
-  --blue: #3f6791;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #e74c3c;
-  --orange: #fd7e14;
-  --yellow: #f39c12;
-  --green: #00bc8c;
-  --teal: #20c997;
-  --cyan: #3498db;
+  --lightblue: #71E9A4;
+  --navy: #71E9A4;
+  --olive: #71E9A4;
+  --lime: #71E9A4;
+  --fuchsia: #71E9A4;
+  --maroon: #71E9A4;
+  --blue: #71E9A4;
+  --indigo: #71E9A4;
+  --purple: #71E9A4;
+  --pink: #71E9A4;
+  --red: #71E9A4;
+  --orange: #71E9A4;
+  --yellow: #71E9A4;
+  --green: #71E9A4;
+  --teal: #71E9A4;
+  --cyan: #71E9A4;
   --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #3f6791;
-  --secondary: #6c757d;
-  --success: #00bc8c;
-  --info: #3498db;
-  --warning: #f39c12;
-  --danger: #e74c3c;
-  --light: #f8f9fa;
-  --dark: #343a40;
+  --gray: #71E9A4;
+  --gray-dark: #71E9A4;
+  --primary: #71E9A4;
+  --secondary: #71E9A4;
+  --success: #71E9A4;
+  --info: #71E9A4;
+  --warning: #71E9A4;
+  --danger: #71E9A4;
+  --light: #71E9A4;
+  --dark: #71E9A4;
 }
 
 .animation__shake {
@@ -11145,7 +11145,7 @@ a.text-dark:hover, a.text-dark:focus {
   background-color: #f4f6f9;
   height: 100vh;
   width: 100%;
-  transition: height 200ms linear;
+  transition: height 20ms linear;
   position: fixed;
   left: 0;
   top: 0;

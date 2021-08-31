@@ -168,29 +168,36 @@ class AjaxPublicacion{
 
 		session_start();
 
-		$tabla = "administradores";
+		if($_SESSION["validarSesionBackend"]=="ok"){
+
+			$tabla = "administradores";
 		
-		$item1 = "dark";
-		if($_SESSION["estiloPantalla"] == 1){
+			$item1 = "dark";
+			if($_SESSION["estiloPantalla"] == 1){
+				
+				$valor1 = 0;
+				$_SESSION["estiloPantalla"] = 0;
+	
+			}else{
+	
+				$valor1 = 1;
+				$_SESSION["estiloPantalla"] = 1;
+	
+			}
 			
-			$valor1 = 0;
-			$_SESSION["estiloPantalla"] = 0;
+			$item2 = "id";
+			$valor2 = $this->activarIdAd;
+	
+			$respuesta = ModeloPublicacion::mdlActualizar($tabla, $item1, $valor1, $item2, $valor2);
+	
+			echo $respuesta;
 
 		}else{
 
-			$valor1 = 1;
-			$_SESSION["estiloPantalla"] = 1;
-
+			echo "error";
+			
 		}
 		
-
-		$item2 = "id";
-		$valor2 = $this->activarIdAd;
-
-		$respuesta = ModeloPublicacion::mdlActualizar($tabla, $item1, $valor1, $item2, $valor2);
-
-		echo $respuesta;
-
 	}
 
 	/*=============================================
@@ -293,11 +300,15 @@ ACTIVAR ADMISION
 =============================================*/	
 
 if(isset($_POST["idAdmin"])){
-	
-	$activarD = new AjaxPublicacion();
-	$activarD -> activarIdAd = $_POST["idAdmin"];
-	$activarD -> ajaxActivarDark();
 
+	//if($_SESSION["validarSesionBackend"]=="ok"){
+		$activarD = new AjaxPublicacion();
+		$activarD -> activarIdAd = $_POST["idAdmin"];
+		$activarD -> ajaxActivarDark();
+	/*}else{
+		echo "error";
+	}*/	
+	
 }
 
 

@@ -1,6 +1,9 @@
 
 $(function () {
-  
+
+  $('.select2').select2()
+  $(".select2-selection").css("border", "2px solid #cecece");
+
   $("#tablaPublicacion").DataTable({
     "responsive": true, "lengthChange": false, "autoWidth": false,
     "buttons": ["copy", "excel", "pdf", "print", "colvis"]
@@ -21,7 +24,18 @@ $(function () {
     "buttons": ["copy", "excel", "pdf", "print", "colvis"]
   }).buttons().container().appendTo('#tablaAdmin_wrapper .col-md-6:eq(0)');
 
+
+  $("#tablaDoc").DataTable({
+    "responsive": true, "lengthChange": false, "autoWidth": false,
+    "buttons": ["excel", "pdf", "print", "colvis"]
+  }).buttons().container().appendTo('#tablaDoc_wrapper .col-md-6:eq(0)');
+
 });
+
+
+
+
+
 
 
 /*

@@ -8,6 +8,8 @@ require_once "modelos/publicacion.modelo.php";
 require_once "controladores/administradores.controlador.php";
 require_once "modelos/administradores.modelo.php";
 
+require_once "controladores/tramite.controlador.php";
+require_once "modelos/tramite.modelo.php";
 
 require_once "modelos/rutas.php";
 
